@@ -1,21 +1,21 @@
-gpus: [ 0, 1, 2 ]
+gpus: [ 0 ]
 data:
-  root_path: '/datasets/extra_space2/ostap/MegaDepth'
-  train_list_path: '/home/ostap/projects/superglue-lightning/assets/megadepth_train_2.0.txt'
-  val_list_path: '/home/ostap/projects/superglue-lightning/assets/megadepth_valid_2.0.txt'
-  test_list_path: '/home/ostap/projects/superglue-lightning/assets/megadepth_valid_2.0.txt'
-  features_dir: 'SuperPointNet_960_720'
-  max_keypoints: 1024
+  root_path: '/host_Data/Data/MegaDepth/MegaDepth'
+  train_list_path: './assets/megadepth_train_2.0.txt'
+  val_list_path:   './assets/megadepth_valid_2.0.txt'
+  test_list_path:  './assets/megadepth_valid_2.0.txt'
+  features_dir: '/host_Data/Data/MegaDepth/MegaDepth/extracted_features/phoenix/SuperPointNet_1280_1280'
+  max_keypoints: 2048
 
   batch_size_per_gpu: 4
   dataloader_workers_per_gpu: 4
-  target_size: [ 960, 720 ]
+  target_size: [ 1280, 1280 ]
   val_max_pairs_per_scene: 50
   train_pairs_overlap: [0.15, 0.7]
 
 logging:
   root_path: 'logs'
-  name: 'testing'
+  name: 'SuperPointNet_1280_1280'
   train_logs_steps: 50
 
 train:
@@ -33,7 +33,6 @@ train:
   augmentations:
     name: 'none'
   use_cached_features: True
-#   favor_redraw_projection_every_n_steps: 500
 
 evaluation:
   epipolar_dist_threshold: 5.0e-4
