@@ -1,0 +1,62 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Sanity Checking DataLoader 0:   0%|                                                                                                                  | 0/5 [00:00<?, ?it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name                   | Type                      | Params
+---------------------------------------------------------------------
+0 | superglue              | SuperGlue                 | 12.0 M
+1 | augmentations          | AugmentationSequential    | 0
+2 | epipolar_dist_metric   | AccuracyUsingEpipolarDist | 0
+3 | camera_pose_auc_metric | CameraPoseAUC             | 0
+---------------------------------------------------------------------
+12.0 M    Trainable params
+0         Non-trainable params
+12.0 M    Total params
+47.829    Total estimated model params size (MB)
+Traceback (most recent call last):
+  File "train_cached.py", line 93, in <module>
+    main()
+  File "train_cached.py", line 89, in main
+    trainer.fit(model, datamodule=dm, ckpt_path=config.get('checkpoint'))
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in fit
+    self._call_and_handle_interrupt(
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 723, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 811, in _fit_impl
+    results = self._run(model, ckpt_path=self.ckpt_path)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1236, in _run
+    results = self._run_stage()
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1323, in _run_stage
+    return self._run_train()
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1345, in _run_train
+    self._run_sanity_check()
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1413, in _run_sanity_check
+    val_loop.run()
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 204, in run
+    self.advance(*args, **kwargs)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 154, in advance
+    dl_outputs = self.epoch_loop.run(self._data_fetcher, dl_max_batches, kwargs)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 204, in run
+    self.advance(*args, **kwargs)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 128, in advance
+    output = self._evaluation_step(**kwargs)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 226, in _evaluation_step
+    output = self.trainer._call_strategy_hook("validation_step", *kwargs.values())
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1765, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/pytorch_lightning/strategies/strategy.py", line 344, in validation_step
+    return self.model.validation_step(*args, **kwargs)
+  File "/workspace/code/OpenGlue/models/matching_module.py", line 120, in validation_step
+    self.epipolar_dist_metric(matched_kpts0, matched_kpts1, transformation, len(kpts0))
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/torchmetrics/metric.py", line 235, in forward
+    self._forward_cache = self._forward_full_state_update(*args, **kwargs)
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/torchmetrics/metric.py", line 265, in _forward_full_state_update
+    batch_val = self.compute()
+  File "/root/code/OpenGlue/lib/python3.8/site-packages/torchmetrics/metric.py", line 523, in wrapped_func
+    value = compute(*args, **kwargs)
+  File "/workspace/code/OpenGlue/utils/metrics.py", line 50, in compute
+    'Precision': self.precision.mean(),

@@ -1,0 +1,1 @@
+{"lr-Adam": 9.940239103050514e-05, "trainer/global_step": 999, "_timestamp": 1655160981, "_runtime": 586, "_step": 41, "Train NLL loss": 6.825265884399414, "Train Metric loss": 0.0, "epoch": 1, "Precision": 0.09833333641290665, "Matching Score": 0.00011718749738065526, "AUC@5.0deg": 0.0, "AUC@10.0deg": 0.0, "AUC@20.0deg": 0.0, "_wandb": {"runtime": 586}}

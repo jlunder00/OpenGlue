@@ -1,0 +1,147 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.18
+    framework: lightning
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+    - 1: lr-Adam
+      5: 1
+      6:
+      - 1
+    - 1: Train NLL loss
+      5: 1
+      6:
+      - 1
+    - 1: Train Metric loss
+      5: 1
+      6:
+      - 1
+    - 1: epoch
+      5: 1
+      6:
+      - 1
+    - 1: Precision
+      5: 1
+      6:
+      - 1
+    - 1: Matching Score
+      5: 1
+      6:
+      - 1
+    - 1: AUC@5\.0deg
+      5: 1
+      6:
+      - 1
+    - 1: AUC@10\.0deg
+      5: 1
+      6:
+      - 1
+    - 1: AUC@20\.0deg
+      5: 1
+      6:
+      - 1
+    python_version: 3.8.10
+    start_time: 1655152155
+    t:
+      1:
+      - 1
+      - 9
+      - 41
+      - 55
+      - 79
+      3:
+      - 7
+      - 13
+      - 23
+      4: 3.8.10
+      5: 0.12.18
+      8:
+      - 5
+data:
+  desc: null
+  value:
+    batch_size_per_gpu: 2
+    dataloader_workers_per_gpu: 2
+    features_dir: /host_Data/Data/MegaDepth/MegaDepth/extracted_features/phoenix2/SuperPointNet_960_720
+    max_keypoints: 2048
+    root_path: /host_Data/Data/MegaDepth/MegaDepth
+    target_size:
+    - 960
+    - 720
+    test_list_path: ./assets/subset-20-20-val.txt
+    train_list_path: ./assets/subset-20-20-train.txt
+    train_pairs_overlap:
+    - 0.15
+    - 0.7
+    val_list_path: ./assets/subset-20-20-val.txt
+    val_max_pairs_per_scene: 25
+evaluation:
+  desc: null
+  value:
+    camera_auc_ransac_inliers_threshold: 1.0
+    camera_auc_thresholds:
+    - 5.0
+    - 10.0
+    - 20.0
+    epipolar_dist_threshold: 0.0005
+gpus:
+  desc: null
+  value:
+  - 0
+inference:
+  desc: null
+  value:
+    match_threshold: 0.2
+logging:
+  desc: null
+  value:
+    name: SuperPointNet_960_720_preextracted
+    root_path: logs
+    train_logs_steps: 50
+superglue:
+  desc: null
+  value:
+    attention_gnn:
+      attention: softmax
+      embed_dim: 256
+      num_heads: 4
+      num_stages: 9
+      use_offset: false
+    descriptor_dim: 256
+    dustbin_score_init: 1.0
+    laf_to_sideinfo_method: none
+    otp:
+      num_iters: 20
+      reg: 1.0
+    positional_encoding:
+      hidden_layers_sizes:
+      - 32
+      - 64
+      - 128
+      output_size: 256
+      side_info_size: 1
+    residual: true
+train:
+  desc: null
+  value:
+    augmentations:
+      name: none
+    epochs: 10
+    grad_clip: 10.0
+    gt_negative_threshold: 7
+    gt_positive_threshold: 2
+    lr: 0.0001
+    margin: null
+    metric_weight: 0.0
+    nll_weight: 1.0
+    precision: 32
+    scheduler_gamma: 0.999994
+    steps_per_epoch: 750
+    use_cached_features: true

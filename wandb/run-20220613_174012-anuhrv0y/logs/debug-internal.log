@@ -1,0 +1,108 @@
+2022-06-13 17:40:13,024 INFO    StreamThr :23236 [internal.py:wandb_internal():90] W&B internal server running at pid: 23236, started at: 2022-06-13 17:40:13.024406
+2022-06-13 17:40:13,026 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: status
+2022-06-13 17:40:13,027 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: status
+2022-06-13 17:40:13,028 DEBUG   SenderThread:23236 [sender.py:send():235] send: header
+2022-06-13 17:40:13,028 INFO    WriterThread:23236 [datastore.py:open_for_write():75] open: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/run-anuhrv0y.wandb
+2022-06-13 17:40:13,028 DEBUG   SenderThread:23236 [sender.py:send():235] send: run
+2022-06-13 17:40:13,029 INFO    SenderThread:23236 [sender.py:_maybe_setup_resume():492] checking resume status for None/superglue/anuhrv0y
+2022-06-13 17:40:13,440 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: check_version
+2022-06-13 17:40:13,444 INFO    SenderThread:23236 [dir_watcher.py:__init__():205] watching files in: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files
+2022-06-13 17:40:13,444 INFO    SenderThread:23236 [sender.py:_start_run_threads():812] run started: anuhrv0y with start time 1655142013
+2022-06-13 17:40:13,444 DEBUG   SenderThread:23236 [sender.py:send():235] send: summary
+2022-06-13 17:40:13,444 INFO    SenderThread:23236 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 17:40:13,444 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: check_version
+2022-06-13 17:40:13,583 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: run_start
+2022-06-13 17:40:13,596 DEBUG   HandlerThread:23236 [meta.py:__init__():35] meta init
+2022-06-13 17:40:13,596 DEBUG   HandlerThread:23236 [meta.py:__init__():49] meta init done
+2022-06-13 17:40:13,596 DEBUG   HandlerThread:23236 [meta.py:probe():209] probe
+2022-06-13 17:40:13,602 DEBUG   HandlerThread:23236 [meta.py:_setup_git():199] setup git
+2022-06-13 17:40:13,610 DEBUG   HandlerThread:23236 [meta.py:_setup_git():206] setup git done
+2022-06-13 17:40:13,611 DEBUG   HandlerThread:23236 [meta.py:_save_pip():53] save pip
+2022-06-13 17:40:13,611 DEBUG   HandlerThread:23236 [meta.py:_save_pip():67] save pip done
+2022-06-13 17:40:13,611 DEBUG   HandlerThread:23236 [meta.py:probe():247] probe done
+2022-06-13 17:40:13,646 DEBUG   SenderThread:23236 [sender.py:send():235] send: files
+2022-06-13 17:40:13,646 INFO    SenderThread:23236 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2022-06-13 17:40:13,654 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:40:13,654 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:40:13,811 DEBUG   SenderThread:23236 [sender.py:send():235] send: telemetry
+2022-06-13 17:40:13,811 DEBUG   SenderThread:23236 [sender.py:send():235] send: metric
+2022-06-13 17:40:13,811 DEBUG   SenderThread:23236 [sender.py:send():235] send: telemetry
+2022-06-13 17:40:13,811 DEBUG   SenderThread:23236 [sender.py:send():235] send: metric
+2022-06-13 17:40:13,811 WARNING SenderThread:23236 [sender.py:send_metric():905] Seen metric with glob (shouldn't happen)
+2022-06-13 17:40:13,811 DEBUG   SenderThread:23236 [sender.py:send():235] send: config
+2022-06-13 17:40:14,204 INFO    Thread-16 :23236 [upload_job.py:push():132] Uploaded file /tmp/tmpz0cn9cefwandb/3m5mp031-wandb-metadata.json
+2022-06-13 17:40:14,205 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: pause
+2022-06-13 17:40:14,205 INFO    HandlerThread:23236 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-06-13 17:40:14,233 DEBUG   SenderThread:23236 [sender.py:send():235] send: stats
+2022-06-13 17:40:14,445 INFO    Thread-12 :23236 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files/output.log
+2022-06-13 17:40:14,445 INFO    Thread-12 :23236 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files/wandb-metadata.json
+2022-06-13 17:40:14,445 INFO    Thread-12 :23236 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files/wandb-summary.json
+2022-06-13 17:40:14,445 INFO    Thread-12 :23236 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files/requirements.txt
+2022-06-13 17:40:28,919 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:40:28,920 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:40:43,455 INFO    Thread-12 :23236 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files/config.yaml
+2022-06-13 17:40:44,083 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:40:44,083 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:40:59,236 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:40:59,236 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:41:14,418 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:41:14,419 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:41:29,591 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:41:29,591 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:41:44,756 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:41:44,757 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:41:59,910 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:41:59,910 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:42:15,084 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:42:15,084 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:42:30,258 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:42:30,258 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:42:45,407 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:42:45,407 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:43:00,568 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:43:00,568 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:43:15,736 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:43:15,736 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:43:28,838 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: resume
+2022-06-13 17:43:28,839 INFO    HandlerThread:23236 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-06-13 17:43:28,840 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: pause
+2022-06-13 17:43:28,841 INFO    HandlerThread:23236 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-06-13 17:43:28,851 DEBUG   SenderThread:23236 [sender.py:send():235] send: stats
+2022-06-13 17:43:28,897 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: resume
+2022-06-13 17:43:28,897 INFO    HandlerThread:23236 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-06-13 17:43:28,902 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: pause
+2022-06-13 17:43:28,902 INFO    HandlerThread:23236 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-06-13 17:43:28,909 DEBUG   SenderThread:23236 [sender.py:send():235] send: stats
+2022-06-13 17:43:29,180 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: resume
+2022-06-13 17:43:29,180 INFO    HandlerThread:23236 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-06-13 17:43:29,284 DEBUG   SenderThread:23236 [sender.py:send():235] send: config
+2022-06-13 17:43:29,349 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: pause
+2022-06-13 17:43:29,349 INFO    HandlerThread:23236 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-06-13 17:43:29,395 DEBUG   SenderThread:23236 [sender.py:send():235] send: stats
+2022-06-13 17:43:30,522 INFO    Thread-12 :23236 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files/output.log
+2022-06-13 17:43:30,925 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:43:30,925 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:43:43,693 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: resume
+2022-06-13 17:43:43,693 INFO    HandlerThread:23236 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-06-13 17:43:43,733 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: pause
+2022-06-13 17:43:43,733 INFO    HandlerThread:23236 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-06-13 17:43:43,805 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: resume
+2022-06-13 17:43:43,805 INFO    HandlerThread:23236 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-06-13 17:43:43,805 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: pause
+2022-06-13 17:43:43,805 INFO    HandlerThread:23236 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-06-13 17:43:43,815 DEBUG   SenderThread:23236 [sender.py:send():235] send: stats
+2022-06-13 17:43:43,815 DEBUG   SenderThread:23236 [sender.py:send():235] send: stats
+2022-06-13 17:43:44,157 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: resume
+2022-06-13 17:43:44,158 INFO    HandlerThread:23236 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-06-13 17:43:44,258 DEBUG   SenderThread:23236 [sender.py:send():235] send: config
+2022-06-13 17:43:44,316 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: pause
+2022-06-13 17:43:44,316 INFO    HandlerThread:23236 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-06-13 17:43:44,370 DEBUG   SenderThread:23236 [sender.py:send():235] send: stats
+2022-06-13 17:43:46,066 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:43:46,066 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:43:46,529 INFO    Thread-12 :23236 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files/output.log
+2022-06-13 17:43:46,529 INFO    Thread-12 :23236 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_174012-anuhrv0y/files/config.yaml
+2022-06-13 17:44:01,217 DEBUG   HandlerThread:23236 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 17:44:01,217 DEBUG   SenderThread:23236 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 17:44:09,647 INFO    MainThread:23236 [internal.py:handle_exit():80] Internal process exited
+2022-06-13 17:44:09,648 WARNING MsgRouterThr:23236 [router.py:message_loop():73] EOFError seen in message_loop

@@ -212,7 +212,7 @@ class OpenGlueMatcher(nn.Module):
 
 
 def run_inference(image0_path, image1_path, experiment_path, checkpoint_name, device='cpu'):
-    max_features = 2048  # as for the IMC track
+    max_features = 1024  # as for the IMC track
     resize_to = 'original'  # we will not resize input images for our example
 
     matcher, feature_extractor, config = initialize_models(experiment_path,
@@ -226,7 +226,7 @@ def run_inference(image0_path, image1_path, experiment_path, checkpoint_name, de
     sg = OpenGlueMatcher(feature_extractor, matcher, config)
     with torch.no_grad():
         out = sg({"image0": timg0, "image1": timg1})
-
+    print('-------------', out['keypoints0'].detach().cpu().numpy(), out['keypoints1'].detach().cpu().numpy())
     F, inliers = cv2.findFundamentalMat(out['keypoints0'].detach().cpu().numpy(),
                                         out['keypoints1'].detach().cpu().numpy(),
                                         cv2.USAC_MAGSAC, 1.0, 0.999, 100000)

@@ -1,0 +1,25 @@
+2022-06-09 21:25:17,669 INFO    MainThread:28348 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2022-06-09 21:25:17,669 INFO    MainThread:28348 [wandb_setup.py:_flush():76] Loading settings from /root/code/OpenGlue/OpenGlue/wandb/settings
+2022-06-09 21:25:17,669 INFO    MainThread:28348 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'_require_service': 'True'}
+2022-06-09 21:25:17,670 INFO    MainThread:28348 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_cached.py', 'program': 'train_cached.py'}
+2022-06-09 21:25:17,670 INFO    MainThread:28348 [wandb_init.py:_log_setup():428] Logging user logs to /root/code/OpenGlue/OpenGlue/wandb/run-20220609_212517-1br45vfp/logs/debug.log
+2022-06-09 21:25:17,670 INFO    MainThread:28348 [wandb_init.py:_log_setup():429] Logging internal logs to /root/code/OpenGlue/OpenGlue/wandb/run-20220609_212517-1br45vfp/logs/debug-internal.log
+2022-06-09 21:25:17,670 INFO    MainThread:28348 [wandb_init.py:init():462] calling init triggers
+2022-06-09 21:25:17,670 INFO    MainThread:28348 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {}
+2022-06-09 21:25:17,670 INFO    MainThread:28348 [wandb_init.py:init():515] starting backend
+2022-06-09 21:25:17,670 INFO    MainThread:28348 [wandb_init.py:init():519] setting up manager
+2022-06-09 21:25:17,671 INFO    MainThread:28348 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-06-09 21:25:17,673 INFO    MainThread:28348 [wandb_init.py:init():525] backend started and connected
+2022-06-09 21:25:17,674 INFO    MainThread:28348 [wandb_init.py:init():596] updated telemetry
+2022-06-09 21:25:17,682 INFO    MainThread:28348 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-09 21:25:18,059 INFO    MainThread:28348 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-09 21:25:18,166 INFO    MainThread:28348 [wandb_run.py:_on_init():1928] got version response 
+2022-06-09 21:25:18,166 INFO    MainThread:28348 [wandb_init.py:init():662] starting run threads in backend
+2022-06-09 21:25:18,234 INFO    MainThread:28348 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-09 21:25:18,235 INFO    MainThread:28348 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-09 21:25:18,235 INFO    MainThread:28348 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-09 21:25:18,236 INFO    MainThread:28348 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-09 21:25:18,236 INFO    MainThread:28348 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-09 21:25:18,238 INFO    MainThread:28348 [wandb_run.py:_config_callback():1136] config_cb None None {'gpus': [0], 'data': {'root_path': '/host_Data/Data/MegaDepth/MegaDepth', 'train_list_path': './assets/megadepth_train_2.0.txt', 'val_list_path': './assets/megadepth_valid_2.0.txt', 'test_list_path': './assets/megadepth_valid_2.0.txt', 'features_dir': '/host_Data/Data/MegaDepth/MegaDepth/extracted_features/phoenix/SuperPointNet_1280_1280', 'max_keypoints': 2048, 'batch_size_per_gpu': 4, 'dataloader_workers_per_gpu': 4, 'target_size': [1280, 1280], 'val_max_pairs_per_scene': 50, 'train_pairs_overlap': [0.15, 0.7]}, 'logging': {'root_path': 'logs', 'name': 'SuperPointNet_1280_1280', 'train_logs_steps': 50}, 'train': {'epochs': 100, 'steps_per_epoch': 10000, 'grad_clip': 10.0, 'precision': 32, 'gt_positive_threshold': 2, 'gt_negative_threshold': 7, 'margin': None, 'nll_weight': 1.0, 'metric_weight': 0.0, 'lr': 0.0001, 'scheduler_gamma': 0.999994, 'augmentations': {'name': 'none'}, 'use_cached_features': True}, 'evaluation': {'epipolar_dist_threshold': 0.0005, 'camera_auc_thresholds': [5.0, 10.0, 20.0], 'camera_auc_ransac_inliers_threshold': 1.0}, 'inference': {'match_threshold': 0.2}, 'superglue': {'laf_to_sideinfo_method': 'none', 'positional_encoding': {'hidden_layers_sizes': [32, 64, 128], 'output_size': 256, 'side_info_size': 1}, 'attention_gnn': {'num_stages': 9, 'num_heads': 4, 'attention': 'softmax', 'use_offset': False, 'embed_dim': 256}, 'dustbin_score_init': 1.0, 'otp': {'num_iters': 20, 'reg': 1.0}, 'residual': True, 'descriptor_dim': 256}}
+2022-06-09 21:26:53,621 WARNING MsgRouterThr:28348 [router.py:message_loop():76] message_loop has been closed

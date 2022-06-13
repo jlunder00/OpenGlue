@@ -1,0 +1,170 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Epoch 0:   0%|          | 0/800 [00:00<?, ?it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name                     | Type                      | Params
+-----------------------------------------------------------------------
+0 | local_features_extractor | SuperPointNet             | 1.3 M
+1 | superglue                | SuperGlue                 | 12.0 M
+2 | augmentations            | AugmentationSequential    | 0
+3 | epipolar_dist_metric     | AccuracyUsingEpipolarDist | 0
+4 | camera_pose_auc_metric   | CameraPoseAUC             | 0
+-----------------------------------------------------------------------
+12.0 M    Trainable params
+1.3 M     Non-trainable params
+13.3 M    Total params
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  94%|█████████▍| 750/800 [04:24<00:17,  2.84it/s, loss=3.65, v_num=txmv, Train NLL loss=3.290, Train Metric loss=0.000]
+
+<All keys matched successfully>         | 0/50 [00:00<?, ?it/s]
+{'descriptor_dim': 256, 'name': 'SuperPointNet', 'parameters': {'descriptor_dim': 256, 'keypoint_threshold': 0.005, 'max_keypoints': 1024, 'nms_kernel': 9, 'remove_borders_size': 4, 'weights': './models/superglue/weights/superpoint_magicleap_v1.pth'}, 'max_keypoints': 2048}
+<All keys matched successfully>
+{'descriptor_dim': 256, 'name': 'SuperPointNet', 'parameters': {'descriptor_dim': 256, 'keypoint_threshold': 0.005, 'max_keypoints': 1024, 'nms_kernel': 9, 'remove_borders_size': 4, 'weights': './models/superglue/weights/superpoint_magicleap_v1.pth'}, 'max_keypoints': 2048}
+<All keys matched successfully>
+Epoch 0:  94%|█████████▍| 750/800 [21:59<01:27,  1.76s/it, loss=3.65, v_num=txmv, Train NLL loss=3.290, Train Metric loss=0.000]
+                                                               {'descriptor_dim': 256, 'name': 'SuperPointNet', 'parameters': {'descriptor_dim': 256, 'keypoint_threshold': 0.005, 'max_keypoints': 1024, 'nms_kernel': 9, 'remove_borders_size': 4, 'weights': './models/superglue/weights/superpoint_magicleap_v1.pth'}, 'max_keypoints': 2048}
+<All keys matched successfully>
+<All keys matched successfully>
+{'descriptor_dim': 256, 'name': 'SuperPointNet', 'parameters': {'descriptor_dim': 256, 'keypoint_threshold': 0.005, 'max_keypoints': 1024, 'nms_kernel': 9, 'remove_borders_size': 4, 'weights': './models/superglue/weights/superpoint_magicleap_v1.pth'}, 'max_keypoints': 2048}
+<All keys matched successfully>
+<All keys matched successfully>
+{'descriptor_dim': 256, 'name': 'SuperPointNet', 'parameters': {'descriptor_dim': 256, 'keypoint_threshold': 0.005, 'max_keypoints': 1024, 'nms_kernel': 9, 'remove_borders_size': 4, 'weights': './models/superglue/weights/superpoint_magicleap_v1.pth'}, 'max_keypoints': 2048}
+<All keys matched successfully>
+<All keys matched successfully>
+{'descriptor_dim': 256, 'name': 'SuperPointNet', 'parameters': {'descriptor_dim': 256, 'keypoint_threshold': 0.005, 'max_keypoints': 1024, 'nms_kernel': 9, 'remove_borders_size': 4, 'weights': './models/superglue/weights/superpoint_magicleap_v1.pth'}, 'max_keypoints': 2048}
+<All keys matched successfully>
+<All keys matched successfully>
+{'descriptor_dim': 256, 'name': 'SuperPointNet', 'parameters': {'descriptor_dim': 256, 'keypoint_threshold': 0.005, 'max_keypoints': 1024, 'nms_kernel': 9, 'remove_borders_size': 4, 'weights': './models/superglue/weights/superpoint_magicleap_v1.pth'}, 'max_keypoints': 2048}
+<All keys matched successfully>

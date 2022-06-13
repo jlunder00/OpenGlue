@@ -7,6 +7,7 @@ from datetime import datetime
 from omegaconf import OmegaConf
 import pytorch_lightning as pl
 from pytorch_lightning.plugins import DDPPlugin
+from pytorch_lightning.strategies.ddp import DDPStrategy
 
 from data.megadepth_datamodule import MegaDepthPairsDataModuleFeatures
 from models.matching_module import MatchingTrainingModule
@@ -80,6 +81,7 @@ def main():
         num_sanity_val_steps=5,
         callbacks=callbacks,
         logger=loggers,
+        # strategy=DDPStrategy(find_unused_parameters=False),
         plugins=DDPPlugin(find_unused_parameters=False),
         precision=config['train'].get('precision', 32),
     )

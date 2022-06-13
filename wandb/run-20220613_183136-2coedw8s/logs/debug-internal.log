@@ -1,0 +1,475 @@
+2022-06-13 18:31:36,451 INFO    StreamThr :32722 [internal.py:wandb_internal():90] W&B internal server running at pid: 32722, started at: 2022-06-13 18:31:36.450774
+2022-06-13 18:31:36,453 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: status
+2022-06-13 18:31:36,453 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: status
+2022-06-13 18:31:36,454 DEBUG   SenderThread:32722 [sender.py:send():235] send: header
+2022-06-13 18:31:36,455 DEBUG   SenderThread:32722 [sender.py:send():235] send: run
+2022-06-13 18:31:36,456 INFO    WriterThread:32722 [datastore.py:open_for_write():75] open: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/run-2coedw8s.wandb
+2022-06-13 18:31:36,456 INFO    SenderThread:32722 [sender.py:_maybe_setup_resume():492] checking resume status for None/superglue/2coedw8s
+2022-06-13 18:31:36,845 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: check_version
+2022-06-13 18:31:36,847 INFO    SenderThread:32722 [dir_watcher.py:__init__():205] watching files in: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files
+2022-06-13 18:31:36,847 INFO    SenderThread:32722 [sender.py:_start_run_threads():812] run started: 2coedw8s with start time 1655145096
+2022-06-13 18:31:36,848 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:31:36,848 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:31:36,848 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: check_version
+2022-06-13 18:31:36,974 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: run_start
+2022-06-13 18:31:36,985 DEBUG   HandlerThread:32722 [meta.py:__init__():35] meta init
+2022-06-13 18:31:36,985 DEBUG   HandlerThread:32722 [meta.py:__init__():49] meta init done
+2022-06-13 18:31:36,985 DEBUG   HandlerThread:32722 [meta.py:probe():209] probe
+2022-06-13 18:31:36,992 DEBUG   HandlerThread:32722 [meta.py:_setup_git():199] setup git
+2022-06-13 18:31:37,000 DEBUG   HandlerThread:32722 [meta.py:_setup_git():206] setup git done
+2022-06-13 18:31:37,000 DEBUG   HandlerThread:32722 [meta.py:_save_pip():53] save pip
+2022-06-13 18:31:37,000 DEBUG   HandlerThread:32722 [meta.py:_save_pip():67] save pip done
+2022-06-13 18:31:37,000 DEBUG   HandlerThread:32722 [meta.py:probe():247] probe done
+2022-06-13 18:31:37,030 DEBUG   SenderThread:32722 [sender.py:send():235] send: files
+2022-06-13 18:31:37,030 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2022-06-13 18:31:37,034 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:31:37,034 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:31:37,180 DEBUG   SenderThread:32722 [sender.py:send():235] send: telemetry
+2022-06-13 18:31:37,180 DEBUG   SenderThread:32722 [sender.py:send():235] send: metric
+2022-06-13 18:31:37,180 DEBUG   SenderThread:32722 [sender.py:send():235] send: telemetry
+2022-06-13 18:31:37,180 DEBUG   SenderThread:32722 [sender.py:send():235] send: metric
+2022-06-13 18:31:37,180 WARNING SenderThread:32722 [sender.py:send_metric():905] Seen metric with glob (shouldn't happen)
+2022-06-13 18:31:37,180 DEBUG   SenderThread:32722 [sender.py:send():235] send: config
+2022-06-13 18:31:37,473 INFO    Thread-16 :32722 [upload_job.py:push():132] Uploaded file /tmp/tmpioilwq9gwandb/1xrnawpy-wandb-metadata.json
+2022-06-13 18:31:37,849 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-metadata.json
+2022-06-13 18:31:37,849 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/requirements.txt
+2022-06-13 18:31:37,849 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:31:37,849 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:31:39,848 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:31:52,183 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:31:52,184 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:32:05,135 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:32:07,324 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:32:07,324 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:32:07,856 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/config.yaml
+2022-06-13 18:32:22,463 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:32:22,463 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:32:35,298 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:32:37,619 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:32:37,619 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:32:49,868 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:32:51,868 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:32:53,869 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:32:55,869 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:32:57,619 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:32:57,620 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:32:57,870 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:32:59,871 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:01,871 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:03,872 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:05,451 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:33:05,872 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:07,873 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:09,874 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:11,874 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:12,948 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:33:12,948 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:33:13,875 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:15,875 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:17,876 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:19,876 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:21,877 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:23,878 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:25,878 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:27,879 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:28,086 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:33:28,086 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:33:29,879 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:31,880 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:33,881 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:35,620 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:33:35,881 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:37,882 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:39,882 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:41,883 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:43,227 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:33:43,228 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:33:43,884 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:45,884 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:47,885 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:49,885 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:51,886 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:53,887 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:55,887 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:57,888 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:33:58,372 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:33:58,372 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:33:59,888 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:01,889 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:02,585 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-13 18:34:02,586 DEBUG   SenderThread:32722 [sender.py:send():235] send: metric
+2022-06-13 18:34:02,586 DEBUG   SenderThread:32722 [sender.py:send():235] send: history
+2022-06-13 18:34:02,586 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:34:02,586 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:34:02,889 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:34:03,890 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:04,075 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-13 18:34:04,075 DEBUG   SenderThread:32722 [sender.py:send():235] send: metric
+2022-06-13 18:34:04,076 DEBUG   SenderThread:32722 [sender.py:send():235] send: metric
+2022-06-13 18:34:04,076 DEBUG   SenderThread:32722 [sender.py:send():235] send: metric
+2022-06-13 18:34:04,076 DEBUG   SenderThread:32722 [sender.py:send():235] send: history
+2022-06-13 18:34:04,076 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:34:04,076 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:34:04,890 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:34:05,784 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:34:05,890 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:07,891 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:09,892 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:11,892 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:13,893 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:14,268 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:34:14,268 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:34:15,894 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/config.yaml
+2022-06-13 18:34:15,894 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:17,894 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:19,895 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:21,895 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:23,896 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:25,897 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:27,897 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:29,426 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:34:29,426 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:34:29,898 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:31,899 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:33,900 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:35,900 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:36,074 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:34:37,900 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:39,901 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:41,901 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:43,902 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:44,598 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:34:44,598 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:34:45,903 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:47,903 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:49,904 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:51,905 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:53,905 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:55,906 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:57,907 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:34:59,778 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:34:59,779 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:34:59,907 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:01,908 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:03,909 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:05,909 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:06,233 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:35:07,910 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:09,911 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:11,911 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:13,912 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:14,924 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:35:14,924 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:35:15,913 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:17,913 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:18,124 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-13 18:35:18,124 DEBUG   SenderThread:32722 [sender.py:send():235] send: history
+2022-06-13 18:35:18,124 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:35:18,125 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:35:18,914 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:35:19,739 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-13 18:35:19,740 DEBUG   SenderThread:32722 [sender.py:send():235] send: history
+2022-06-13 18:35:19,740 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:35:19,740 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:35:19,914 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:19,914 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:35:21,915 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:23,915 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:25,916 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:27,916 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:29,917 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:30,084 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:35:30,085 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:35:31,917 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:33,918 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:35,919 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:36,381 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:35:37,919 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:39,920 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:41,921 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:43,922 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:45,231 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:35:45,231 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:35:45,922 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:47,923 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:49,923 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:51,924 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:53,924 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:55,925 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:57,926 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:35:59,926 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:00,409 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:36:00,410 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:36:01,927 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:03,927 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:05,928 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:06,536 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:36:07,929 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:09,929 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:11,930 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:13,930 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:15,563 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:36:15,563 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:36:15,931 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:17,932 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:19,932 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:21,933 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:23,934 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:25,934 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:27,935 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:29,936 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:31,022 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:36:31,022 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:36:31,937 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:33,937 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:35,938 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:36,698 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:36:37,938 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:39,939 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:41,939 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:43,940 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:45,941 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:46,173 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:36:46,173 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:36:47,030 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-13 18:36:47,031 DEBUG   SenderThread:32722 [sender.py:send():235] send: history
+2022-06-13 18:36:47,031 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:36:47,031 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:36:47,941 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:47,941 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:36:48,810 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-13 18:36:48,811 DEBUG   SenderThread:32722 [sender.py:send():235] send: history
+2022-06-13 18:36:48,811 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:36:48,811 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:36:48,941 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:36:49,942 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:51,942 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:53,943 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:55,944 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:57,944 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:36:59,945 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:01,318 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:37:01,319 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:37:01,945 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:03,946 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:05,947 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:06,826 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:37:07,947 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:09,948 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:11,948 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:13,949 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:15,949 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:16,690 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:37:16,690 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:37:17,950 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:19,951 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:21,952 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:23,952 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:25,953 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:27,954 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:29,954 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:31,846 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:37:31,846 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:37:31,955 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:33,956 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:35,956 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:36,978 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:37:37,957 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:39,957 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:41,958 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:43,959 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:45,959 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:47,026 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:37:47,026 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:37:47,960 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:49,960 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:51,961 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:53,962 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:55,962 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:57,963 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:37:59,963 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:01,964 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:02,201 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:38:02,202 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:38:03,964 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:05,965 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:07,131 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:38:07,966 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:09,966 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:11,967 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:13,968 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:15,968 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:17,342 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:38:17,342 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:38:17,970 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:19,143 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-13 18:38:19,143 DEBUG   SenderThread:32722 [sender.py:send():235] send: history
+2022-06-13 18:38:19,144 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:38:19,144 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:38:19,971 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:19,971 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:38:20,999 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-13 18:38:20,999 DEBUG   SenderThread:32722 [sender.py:send():235] send: history
+2022-06-13 18:38:20,999 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:38:21,000 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:38:21,972 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:21,972 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:38:23,972 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:25,973 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:27,974 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:29,975 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:31,975 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:32,496 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:38:32,496 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:38:33,976 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:35,976 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:37,308 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:38:37,977 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:39,977 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:41,978 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:43,978 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:45,979 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:47,657 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:38:47,657 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:38:47,980 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:49,980 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:51,981 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:53,981 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:55,982 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:57,983 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:38:59,983 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:01,984 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:02,803 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:39:02,804 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:39:03,985 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:05,985 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:07,496 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:39:07,986 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:09,987 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:11,987 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:13,987 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:15,988 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:17,958 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:39:17,958 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:39:17,989 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:19,989 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:21,990 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:23,990 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:25,991 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:27,992 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:29,992 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:31,993 INFO    Thread-12 :32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:33,106 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 18:39:33,107 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 18:39:33,258 DEBUG   SenderThread:32722 [sender.py:send():235] send: exit
+2022-06-13 18:39:33,258 INFO    SenderThread:32722 [sender.py:send_exit():371] handling exit code: 0
+2022-06-13 18:39:33,259 INFO    SenderThread:32722 [sender.py:send_exit():373] handling runtime: 476
+2022-06-13 18:39:33,260 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:33,260 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:39:33,261 INFO    SenderThread:32722 [sender.py:send_exit():379] send defer
+2022-06-13 18:39:33,261 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:33,261 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:33,261 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 0
+2022-06-13 18:39:33,262 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:33,262 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-06-13 18:39:33,262 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 1
+2022-06-13 18:39:33,262 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:33,262 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 1
+2022-06-13 18:39:33,335 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:33,336 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-06-13 18:39:33,336 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 2
+2022-06-13 18:39:33,336 DEBUG   SenderThread:32722 [sender.py:send():235] send: stats
+2022-06-13 18:39:33,336 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:33,336 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 2
+2022-06-13 18:39:33,337 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:33,337 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-06-13 18:39:33,337 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 3
+2022-06-13 18:39:33,337 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:33,337 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 3
+2022-06-13 18:39:33,337 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:33,337 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-06-13 18:39:33,337 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 4
+2022-06-13 18:39:33,337 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:33,337 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 4
+2022-06-13 18:39:33,337 DEBUG   SenderThread:32722 [sender.py:send():235] send: summary
+2022-06-13 18:39:33,338 INFO    SenderThread:32722 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 18:39:33,338 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:33,338 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-06-13 18:39:33,338 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 5
+2022-06-13 18:39:33,338 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:33,338 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 5
+2022-06-13 18:39:33,338 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:33,338 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-06-13 18:39:33,338 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 6
+2022-06-13 18:39:33,338 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:33,338 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 6
+2022-06-13 18:39:33,339 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:33,339 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-06-13 18:39:33,339 INFO    SenderThread:32722 [dir_watcher.py:finish():336] shutting down directory watcher
+2022-06-13 18:39:33,362 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:33,994 INFO    SenderThread:32722 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:39:33,994 INFO    SenderThread:32722 [dir_watcher.py:finish():366] scan: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files
+2022-06-13 18:39:33,994 INFO    SenderThread:32722 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log output.log
+2022-06-13 18:39:33,994 INFO    SenderThread:32722 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/config.yaml config.yaml
+2022-06-13 18:39:33,994 INFO    SenderThread:32722 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-metadata.json wandb-metadata.json
+2022-06-13 18:39:33,994 INFO    SenderThread:32722 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/requirements.txt requirements.txt
+2022-06-13 18:39:33,994 INFO    SenderThread:32722 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json wandb-summary.json
+2022-06-13 18:39:33,994 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 7
+2022-06-13 18:39:33,995 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:33,995 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:33,995 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 7
+2022-06-13 18:39:33,996 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:33,996 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-06-13 18:39:33,996 INFO    SenderThread:32722 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-13 18:39:34,097 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:34,097 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:34,200 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:34,200 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:34,302 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:34,302 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:34,403 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:34,403 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:34,495 INFO    Thread-18 :32722 [upload_job.py:push():132] Uploaded file /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/config.yaml
+2022-06-13 18:39:34,504 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:34,504 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:34,578 INFO    Thread-20 :32722 [upload_job.py:push():132] Uploaded file /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/wandb-summary.json
+2022-06-13 18:39:34,590 INFO    Thread-17 :32722 [upload_job.py:push():132] Uploaded file /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/output.log
+2022-06-13 18:39:34,603 INFO    Thread-19 :32722 [upload_job.py:push():132] Uploaded file /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/files/requirements.txt
+2022-06-13 18:39:34,606 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:34,606 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:34,707 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:34,707 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:34,804 INFO    Thread-11 :32722 [sender.py:transition_state():392] send defer: 8
+2022-06-13 18:39:34,804 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:34,804 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 8
+2022-06-13 18:39:34,805 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:34,805 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-06-13 18:39:34,809 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:35,148 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 9
+2022-06-13 18:39:35,148 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:35,149 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:35,149 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 9
+2022-06-13 18:39:35,149 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:35,149 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-06-13 18:39:35,149 INFO    SenderThread:32722 [sender.py:transition_state():392] send defer: 10
+2022-06-13 18:39:35,150 DEBUG   SenderThread:32722 [sender.py:send():235] send: final
+2022-06-13 18:39:35,150 DEBUG   SenderThread:32722 [sender.py:send():235] send: footer
+2022-06-13 18:39:35,150 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 18:39:35,150 INFO    HandlerThread:32722 [handler.py:handle_request_defer():164] handle defer: 10
+2022-06-13 18:39:35,150 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: defer
+2022-06-13 18:39:35,150 INFO    SenderThread:32722 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-06-13 18:39:35,250 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 18:39:35,250 DEBUG   SenderThread:32722 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 18:39:35,250 INFO    SenderThread:32722 [file_pusher.py:join():150] waiting for file pusher
+2022-06-13 18:39:36,683 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: sampled_history
+2022-06-13 18:39:36,684 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: get_summary
+2022-06-13 18:39:36,685 INFO    MainThread:32722 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-06-13 18:39:36,685 INFO    MainThread:32722 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-06-13 18:39:36,685 INFO    MainThread:32722 [wandb_run.py:_footer_sync_info():3060] logging synced files
+2022-06-13 18:39:36,686 DEBUG   HandlerThread:32722 [handler.py:handle_request():141] handle_request: shutdown
+2022-06-13 18:39:36,686 INFO    HandlerThread:32722 [handler.py:finish():806] shutting down handler
+2022-06-13 18:39:37,151 INFO    WriterThread:32722 [datastore.py:close():279] close: /workspace/code/OpenGlue/wandb/run-20220613_183136-2coedw8s/run-2coedw8s.wandb
+2022-06-13 18:39:37,582 INFO    SenderThread:32722 [sender.py:finish():1111] shutting down sender
+2022-06-13 18:39:37,582 INFO    SenderThread:32722 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-13 18:39:37,582 INFO    SenderThread:32722 [file_pusher.py:join():150] waiting for file pusher
+2022-06-13 18:39:37,689 INFO    MainThread:32722 [internal.py:handle_exit():80] Internal process exited

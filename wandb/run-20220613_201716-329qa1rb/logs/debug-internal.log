@@ -1,0 +1,163 @@
+2022-06-13 20:17:16,260 INFO    StreamThr :13526 [internal.py:wandb_internal():90] W&B internal server running at pid: 13526, started at: 2022-06-13 20:17:16.260415
+2022-06-13 20:17:16,263 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: status
+2022-06-13 20:17:16,263 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: status
+2022-06-13 20:17:16,264 DEBUG   SenderThread:13526 [sender.py:send():235] send: header
+2022-06-13 20:17:16,264 INFO    WriterThread:13526 [datastore.py:open_for_write():75] open: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/run-329qa1rb.wandb
+2022-06-13 20:17:16,265 DEBUG   SenderThread:13526 [sender.py:send():235] send: run
+2022-06-13 20:17:16,266 INFO    SenderThread:13526 [sender.py:_maybe_setup_resume():492] checking resume status for None/superglue/329qa1rb
+2022-06-13 20:17:16,583 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: check_version
+2022-06-13 20:17:16,586 INFO    SenderThread:13526 [dir_watcher.py:__init__():205] watching files in: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files
+2022-06-13 20:17:16,586 INFO    SenderThread:13526 [sender.py:_start_run_threads():812] run started: 329qa1rb with start time 1655151436
+2022-06-13 20:17:16,586 DEBUG   SenderThread:13526 [sender.py:send():235] send: summary
+2022-06-13 20:17:16,586 INFO    SenderThread:13526 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 20:17:16,586 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: check_version
+2022-06-13 20:17:16,723 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: run_start
+2022-06-13 20:17:16,737 DEBUG   HandlerThread:13526 [meta.py:__init__():35] meta init
+2022-06-13 20:17:16,737 DEBUG   HandlerThread:13526 [meta.py:__init__():49] meta init done
+2022-06-13 20:17:16,737 DEBUG   HandlerThread:13526 [meta.py:probe():209] probe
+2022-06-13 20:17:16,744 DEBUG   HandlerThread:13526 [meta.py:_setup_git():199] setup git
+2022-06-13 20:17:16,753 DEBUG   HandlerThread:13526 [meta.py:_setup_git():206] setup git done
+2022-06-13 20:17:16,753 DEBUG   HandlerThread:13526 [meta.py:_save_pip():53] save pip
+2022-06-13 20:17:16,753 DEBUG   HandlerThread:13526 [meta.py:_save_pip():67] save pip done
+2022-06-13 20:17:16,753 DEBUG   HandlerThread:13526 [meta.py:probe():247] probe done
+2022-06-13 20:17:16,788 DEBUG   SenderThread:13526 [sender.py:send():235] send: files
+2022-06-13 20:17:16,788 INFO    SenderThread:13526 [sender.py:_save_file():949] saving file wandb-metadata.json with policy now
+2022-06-13 20:17:16,792 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 20:17:16,793 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 20:17:16,964 DEBUG   SenderThread:13526 [sender.py:send():235] send: telemetry
+2022-06-13 20:17:16,964 DEBUG   SenderThread:13526 [sender.py:send():235] send: metric
+2022-06-13 20:17:16,965 DEBUG   SenderThread:13526 [sender.py:send():235] send: telemetry
+2022-06-13 20:17:16,965 DEBUG   SenderThread:13526 [sender.py:send():235] send: metric
+2022-06-13 20:17:16,965 WARNING SenderThread:13526 [sender.py:send_metric():905] Seen metric with glob (shouldn't happen)
+2022-06-13 20:17:16,965 DEBUG   SenderThread:13526 [sender.py:send():235] send: config
+2022-06-13 20:17:17,413 INFO    Thread-16 :13526 [upload_job.py:push():132] Uploaded file /tmp/tmptzc_u0htwandb/3km0yvgz-wandb-metadata.json
+2022-06-13 20:17:17,586 INFO    Thread-12 :13526 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/wandb-summary.json
+2022-06-13 20:17:17,587 INFO    Thread-12 :13526 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/requirements.txt
+2022-06-13 20:17:17,587 INFO    Thread-12 :13526 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/wandb-metadata.json
+2022-06-13 20:17:17,587 INFO    Thread-12 :13526 [dir_watcher.py:_on_file_created():256] file/dir created: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/output.log
+2022-06-13 20:17:19,586 INFO    Thread-12 :13526 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/output.log
+2022-06-13 20:17:31,966 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 20:17:31,966 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 20:17:44,893 DEBUG   SenderThread:13526 [sender.py:send():235] send: stats
+2022-06-13 20:17:47,117 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 20:17:47,117 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 20:17:47,593 INFO    Thread-12 :13526 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/config.yaml
+2022-06-13 20:18:02,264 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 20:18:02,265 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 20:18:15,047 DEBUG   SenderThread:13526 [sender.py:send():235] send: stats
+2022-06-13 20:18:17,408 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 20:18:17,408 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: stop_status
+2022-06-13 20:18:22,469 DEBUG   SenderThread:13526 [sender.py:send():235] send: exit
+2022-06-13 20:18:22,469 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:22,469 INFO    SenderThread:13526 [sender.py:send_exit():371] handling exit code: 1
+2022-06-13 20:18:22,469 INFO    SenderThread:13526 [sender.py:send_exit():373] handling runtime: 65
+2022-06-13 20:18:22,470 INFO    SenderThread:13526 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 20:18:22,470 INFO    SenderThread:13526 [sender.py:send_exit():379] send defer
+2022-06-13 20:18:22,470 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:22,470 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:22,470 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 0
+2022-06-13 20:18:22,470 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:22,471 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-06-13 20:18:22,471 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 1
+2022-06-13 20:18:22,471 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:22,471 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 1
+2022-06-13 20:18:22,486 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:22,486 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-06-13 20:18:22,486 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 2
+2022-06-13 20:18:22,486 DEBUG   SenderThread:13526 [sender.py:send():235] send: stats
+2022-06-13 20:18:22,487 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:22,487 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 2
+2022-06-13 20:18:22,487 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:22,487 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-06-13 20:18:22,487 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 3
+2022-06-13 20:18:22,487 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:22,487 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 3
+2022-06-13 20:18:22,487 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:22,488 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-06-13 20:18:22,488 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 4
+2022-06-13 20:18:22,488 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:22,488 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 4
+2022-06-13 20:18:22,488 DEBUG   SenderThread:13526 [sender.py:send():235] send: summary
+2022-06-13 20:18:22,488 INFO    SenderThread:13526 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-06-13 20:18:22,488 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:22,488 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-06-13 20:18:22,488 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 5
+2022-06-13 20:18:22,489 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:22,489 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 5
+2022-06-13 20:18:22,489 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:22,489 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-06-13 20:18:22,489 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 6
+2022-06-13 20:18:22,489 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:22,489 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 6
+2022-06-13 20:18:22,489 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:22,489 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-06-13 20:18:22,489 INFO    SenderThread:13526 [dir_watcher.py:finish():336] shutting down directory watcher
+2022-06-13 20:18:22,572 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:22,598 INFO    SenderThread:13526 [dir_watcher.py:_on_file_modified():269] file/dir modified: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/wandb-summary.json
+2022-06-13 20:18:22,599 INFO    SenderThread:13526 [dir_watcher.py:finish():366] scan: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files
+2022-06-13 20:18:22,599 INFO    SenderThread:13526 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/output.log output.log
+2022-06-13 20:18:22,599 INFO    SenderThread:13526 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/config.yaml config.yaml
+2022-06-13 20:18:22,599 INFO    SenderThread:13526 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/wandb-metadata.json wandb-metadata.json
+2022-06-13 20:18:22,599 INFO    SenderThread:13526 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/requirements.txt requirements.txt
+2022-06-13 20:18:22,602 INFO    SenderThread:13526 [dir_watcher.py:finish():380] scan save: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/wandb-summary.json wandb-summary.json
+2022-06-13 20:18:22,602 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 7
+2022-06-13 20:18:22,602 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:22,611 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:22,611 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 7
+2022-06-13 20:18:22,612 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:22,612 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-06-13 20:18:22,612 INFO    SenderThread:13526 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-13 20:18:22,713 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:22,713 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:22,815 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:22,815 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:22,916 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:22,916 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:23,017 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:23,017 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:23,119 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:23,119 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:23,156 INFO    Thread-17 :13526 [upload_job.py:push():132] Uploaded file /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/output.log
+2022-06-13 20:18:23,221 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:23,221 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:23,232 INFO    Thread-20 :13526 [upload_job.py:push():132] Uploaded file /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/wandb-summary.json
+2022-06-13 20:18:23,235 INFO    Thread-18 :13526 [upload_job.py:push():132] Uploaded file /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/config.yaml
+2022-06-13 20:18:23,238 INFO    Thread-19 :13526 [upload_job.py:push():132] Uploaded file /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/files/requirements.txt
+2022-06-13 20:18:23,322 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:23,322 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:23,423 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:23,423 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:23,438 INFO    Thread-11 :13526 [sender.py:transition_state():392] send defer: 8
+2022-06-13 20:18:23,438 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:23,438 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 8
+2022-06-13 20:18:23,439 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:23,439 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-06-13 20:18:23,524 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:23,757 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 9
+2022-06-13 20:18:23,757 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:23,758 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:23,758 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 9
+2022-06-13 20:18:23,759 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:23,759 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-06-13 20:18:23,759 INFO    SenderThread:13526 [sender.py:transition_state():392] send defer: 10
+2022-06-13 20:18:23,759 DEBUG   SenderThread:13526 [sender.py:send():235] send: final
+2022-06-13 20:18:23,760 DEBUG   SenderThread:13526 [sender.py:send():235] send: footer
+2022-06-13 20:18:23,760 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: defer
+2022-06-13 20:18:23,760 INFO    HandlerThread:13526 [handler.py:handle_request_defer():164] handle defer: 10
+2022-06-13 20:18:23,760 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: defer
+2022-06-13 20:18:23,760 INFO    SenderThread:13526 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-06-13 20:18:23,860 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-13 20:18:23,860 DEBUG   SenderThread:13526 [sender.py:send_request():249] send_request: poll_exit
+2022-06-13 20:18:23,860 INFO    SenderThread:13526 [file_pusher.py:join():150] waiting for file pusher
+2022-06-13 20:18:24,246 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: sampled_history
+2022-06-13 20:18:24,247 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: get_summary
+2022-06-13 20:18:24,247 INFO    MainThread:13526 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-06-13 20:18:24,247 INFO    MainThread:13526 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-06-13 20:18:24,247 INFO    MainThread:13526 [wandb_run.py:_footer_sync_info():3060] logging synced files
+2022-06-13 20:18:24,247 DEBUG   HandlerThread:13526 [handler.py:handle_request():141] handle_request: shutdown
+2022-06-13 20:18:24,247 INFO    HandlerThread:13526 [handler.py:finish():806] shutting down handler
+2022-06-13 20:18:24,760 INFO    WriterThread:13526 [datastore.py:close():279] close: /workspace/code/OpenGlue/wandb/run-20220613_201716-329qa1rb/run-329qa1rb.wandb
+2022-06-13 20:18:25,145 INFO    SenderThread:13526 [sender.py:finish():1111] shutting down sender
+2022-06-13 20:18:25,145 INFO    SenderThread:13526 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-13 20:18:25,145 INFO    SenderThread:13526 [file_pusher.py:join():150] waiting for file pusher
+2022-06-13 20:18:25,250 INFO    MainThread:13526 [internal.py:handle_exit():80] Internal process exited
