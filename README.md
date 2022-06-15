@@ -83,7 +83,7 @@ This repository is divided into several modules:
 ### Dependencies
 Todo: add details about installing correct versions of torch with cu113. Update requirements.txt to automate
 For all necessary modules refer to requirements.txt
-<br/>First, create and enter a virtual environment
+<br/>First, create and activate a virtual environment
 ```
 python -m venv ./OpenGlue
 source bin/activate
@@ -93,10 +93,16 @@ Then, install the requirements
 ```
 pip3 install -r requirements.txt
 ```
-Then, to use in an interactive environment, link your virtual environment with an interactive python environment.
+If you wish to use the provided Jupyter notebooks, first install ipykernelL
 ```
-<need to find command for this>
+pip3 install ipykernel
 ```
+Then, install your venv so that ipykernel can use it as a kernel
+```
+python -m ipykernel install --name=OpenGlue
+```
+(With OpenGlue being whatever your venv's name is.)<br/>
+Then, when using one of the provided .ipynb files, select the kernel you have just created as the active kernel. It will be listed as (venv) plus the name of virtual environment <br/>
 
 This code is compatible with Python >= 3.6.9
 * PyTorch >= 1.10.0

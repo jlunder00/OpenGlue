@@ -1,6 +1,8 @@
 matplotlib>=3.1.3
-torch>=1.10.0
-pytorch_lightning>=1.4.9
+torch --index-url https://download.pytorch.org/whl/cu113
+torchvision --index-url https://download.pytorch.org/whl/cu113
+torchaudio --index-url https://download.pytorch.org/whl/cu113
+pytorch_lightning>=1.6.0 
 torchmetrics>=0.5.1
 kornia>=0.6.1
 kornia_moons>=0.1.9
