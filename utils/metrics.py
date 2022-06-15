@@ -45,7 +45,23 @@ class AccuracyUsingEpipolarDist(torchmetrics.Metric):
         self.precision.append(precision)
         self.matching_score.append(matching_score)
 
+    def convert_list_to_tensor(self, old):
+        if self.is_list(old):
+            return old
+        tmp_data = []
+        for t in old:
+            tmp_data.append(t.data)
+        tmp_tensor = old[0]
+        return tmp_tensor.new_tensor(data=tmp_data, device=old[0].device)
+
+    def is_list(self, item):
+        return item is list
+
     def compute(self):
+        self.precision = self.convert_list_to_tensor(self.precision)
+        self.matching_score= self.convert_list_to_tensor(self.matching_score)
+
+
         return {
             'Precision': self.precision.mean(),
             'Matching Score': self.matching_score.mean()
@@ -121,8 +137,22 @@ class CameraPoseAUC(torchmetrics.Metric):
         else:
             error = torch.tensor(np.inf).to(device)
         self.pose_errors.append(error)
+    
+    def convert_list_to_tensor(self, old):
+        if self.is_list(old):
+            return old
+        tmp_data = []
+        print("correction?")
+        for t in old:
+            tmp_data.append(t.data)
+        tmp_tensor = old[0]
+        return tmp_tensor.new_tensor(data=tmp_data, device=old[0].device)
+    
+    def is_list(self, item):
+        return item is list
 
     def compute(self):
+        self.pose_errors = self.convert_list_to_tensor(self.pose_errors)
         errors = self.pose_errors
         errors = torch.sort(errors).values
         recall = (torch.arange(len(errors), device=errors.device) + 1) / len(errors)

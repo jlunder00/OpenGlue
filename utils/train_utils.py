@@ -15,9 +15,6 @@ def prepare_logging_directory(config, experiment_name, features_config=None):
     log_path = os.path.join(config['logging']['root_path'], config['logging']['name'], experiment_name)
     if not os.path.exists(log_path):
         os.makedirs(log_path, exist_ok=True)
-    # write main config
-    with open(os.path.join(log_path, 'config.yaml'), 'w') as f:
-        f.write(OmegaConf.to_yaml(config))
     # also save features config from features directory
     if 'features_dir' in config['data']:
         shutil.copyfile(
@@ -27,6 +24,21 @@ def prepare_logging_directory(config, experiment_name, features_config=None):
     if features_config is not None:
         with open(os.path.join(log_path, 'features_config.yaml'), 'w') as f:
             f.write(OmegaConf.to_yaml(features_config))
+    else:
+        #create features config to access descriptor dim
+        features_config = OmegaConf.load(os.path.join(log_path, 'features_config.yaml'))
+
+    #automatically set superglue: descriptor_dim, superglue: positional_encoding: output_size, and superglue:attention_gnn: embed_dim to be the same as descriptor dim in features config
+    #used in inference step
+    descriptor_dim = features_config['descriptor_dim']
+    config['superglue']['descriptor_dim'] = descriptor_dim
+    config['superglue']['positional_encoding']['output_size'] = descriptor_dim
+    config['superglue']['attention_gnn']['embed_dim'] = descriptor_dim
+    
+    # write main config
+    with open(os.path.join(log_path, 'config.yaml'), 'w') as f:
+        f.write(OmegaConf.to_yaml(config))
+
     return log_path
 
 

@@ -6,8 +6,8 @@ import argparse
 from datetime import datetime
 from omegaconf import OmegaConf
 import pytorch_lightning as pl
-from pytorch_lightning.plugins import DDPPlugin
 from pytorch_lightning.strategies.ddp import DDPStrategy
+# from pytorch_lightning.strategies import DataParallelStrategy
 
 from data.megadepth_datamodule import MegaDepthPairsDataModuleFeatures
 from models.matching_module import MatchingTrainingModule
@@ -74,15 +74,16 @@ def main():
     trainer = pl.Trainer(
         gpus=config['gpus'],
         max_epochs=config['train']['epochs'],
-        accelerator="ddp",
+        # accelerator="ddp",
         gradient_clip_val=config['train']['grad_clip'],
         log_every_n_steps=config['logging']['train_logs_steps'],
         limit_train_batches=config['train']['steps_per_epoch'],
         num_sanity_val_steps=5,
         callbacks=callbacks,
         logger=loggers,
-        # strategy=DDPStrategy(find_unused_parameters=False),
-        plugins=DDPPlugin(find_unused_parameters=False),
+        # strategy=DataParallelStrategy(),
+        strategy=DDPStrategy(find_unused_parameters=False),
+        # plugins=DDPPlugin(find_unused_parameters=False),
         precision=config['train'].get('precision', 32),
     )
     # If loaded from checkpoint - validate

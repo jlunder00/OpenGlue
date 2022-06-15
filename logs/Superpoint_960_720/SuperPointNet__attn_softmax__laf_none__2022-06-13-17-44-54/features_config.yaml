@@ -1,9 +1,0 @@
-name: SuperPointNet
-descriptor_dim: 256
-parameters:
-  max_keypoints: 2048
-  descriptor_dim: 256
-  nms_kernel: 9
-  remove_borders_size: 4
-  keypoint_threshold: 0.005
-  weights: ./models/superglue/weights/superpoint_magicleap_v1.pth

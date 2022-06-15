@@ -6,7 +6,8 @@ import argparse
 from datetime import datetime
 from omegaconf import OmegaConf
 import pytorch_lightning as pl
-from pytorch_lightning.plugins import DDPPlugin
+from pytorch_lightning.strategies.ddp import DDPStrategy
+# from pytorch_lightning.strategies import DataParallelStrategy
 
 from data.megadepth_datamodule import MegaDepthPairsDataModule
 from models.matching_module import MatchingTrainingModule
@@ -30,7 +31,8 @@ def main():
 
     # Prepare directory for logs and checkpoints
     if os.environ.get('LOCAL_RANK', 0) == 0:
-        experiment_name = '{}__attn_{}__laf_{}__{}'.format(
+        experiment_name = '{}/{}__attn_{}__laf_{}__{}'.format(
+            config['data']['experiments_root_path'],
             feature_extractor_config['name'],
             config['superglue']['attention_gnn']['attention'],
             config['superglue']['laf_to_sideinfo_method'],
@@ -69,14 +71,16 @@ def main():
     trainer = pl.Trainer(
         gpus=config['gpus'],
         max_epochs=config['train']['epochs'],
-        accelerator="ddp",
+        # accelerator="ddp",
         gradient_clip_val=config['train']['grad_clip'],
         log_every_n_steps=config['logging']['train_logs_steps'],
         limit_train_batches=config['train']['steps_per_epoch'],
         num_sanity_val_steps=0,
         callbacks=callbacks,
         logger=loggers,
-        plugins=DDPPlugin(find_unused_parameters=False),
+        # strategy=DataParallelStrategy(),
+        strategy=DDPStrategy(find_unused_parameters=False),
+        # plugins=DDPPlugin(find_unused_parameters=False),
         precision=config['train'].get('precision', 32),
     )
     # If loaded from checkpoint - validate
