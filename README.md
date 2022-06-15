@@ -81,8 +81,6 @@ This repository is divided into several modules:
 * `utils` - losses, metrics and additional training utils
 
 ### Dependencies
-Todo: add details about installing correct versions of torch with cu113. Update requirements.txt to automate
-For all necessary modules refer to requirements.txt
 <br/>First, create and activate a virtual environment
 ```
 python -m venv ./OpenGlue
@@ -105,7 +103,7 @@ python -m ipykernel install --name=OpenGlue
 Then, when using one of the provided .ipynb files, select the kernel you have just created as the active kernel. It will be listed as (venv) plus the name of virtual environment <br/>
 
 This code is compatible with Python >= 3.6.9
-* PyTorch >= 1.10.0
+* PyTorch >= 1.11.0
 * PyTorch Lightning >= 1.6.0 
 * Kornia >= 0.6.1
 * OpenCV >= 4.5.4
