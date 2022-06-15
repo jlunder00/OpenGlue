@@ -12,7 +12,7 @@ Our config is organized as follows:
   * `val_list_path` (str) - path to the file with validation split, ex.: megadepth_valid_2.0.txt
   * `test_list_path` (str) - path to the file with test split. Note: OpenGlue's testing framework consists of calling the functions in/running inference.py, on 2 images at a time, and is not set up with scripts to do this on a data sample in an automated way. This config option appears to be non functional in this way, and out of the box from their repo, all instances of it are populated with the same path as the val_list_path, so, I'd reccommend setting it to the same value as the val_list_path until code is written to utilize it for testing and analysis in a more automated manner.
   * `batch_size_per_gpu` (int) -  number of image pairs in a batch per gpu, default=`4` Note: lowering this value seems to help with reducing memory expenditure, which seems to have an impact in terms of whether or not the run can complete without crashing the machine on certian devices. I have set it to 2 in the config files saved in this repository
-  * `dataloader_workers_per_gpu` (int) - number of workers per one gpu, default=`4` Note: lowering this value seems to help with reducing memory expenditure, which seems to have an impact in terms of whether or not the run can complete without crashing the machine on certian devices. I have set it to 2 in the config files saved in this repository 
+  * `dataloader_workers_per_gpu` (int) - number of workers per one gpu, default=`4` Note: lowering this value seems to help with reducing memory expenditure, which seems to have an impact in terms of whether or not the run can complete without crashing the machine on certian devices.
   * `target_size` (List[int, int]) - shape of input image after resizing, default=`[ 960, 720 ]` Note: Make sure that this size is greater than or equal to all of the images you intend to use the model on in the inference step. Inference will fail if the images inputted have dimensions greater than the target size the model was trained on. If your images are too large for the model, you will need to crop the images to a smaller size or retrain the model with a larger target size.
   * `val_max_pairs_per_scene` (int) - max number of image pairs retrieved from the same scene, default=`50` Note: reducing this value helps to reduce training time.
     
@@ -27,6 +27,8 @@ Our config is organized as follows:
 
   
 * `train`: 
+    * `epochs` (int) - The number of passes through the training set that the model preforms, lowering this greately speeds up training
+    * `steps_per_epoch` - The number of batches to use in an epoch. Lowering this value greately speeds up training time at the cost of accuracy/effectiveness of the model
     * `grad_clip` (float) - clip gradients' global norm to <= threshold, default=`10.0` 
     * `precision` (int) - mixed precision configuration, combines the use of both 32 and 16 bit floating points, default=`32`
     * `gt_positive_threshold` (float) - threshold value for ignoring match, default=`3.`
