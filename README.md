@@ -102,6 +102,13 @@ python -m ipykernel install --name=OpenGlue
 (With OpenGlue being whatever your venv's name is.)<br/>
 Then, when using one of the provided .ipynb files, select the kernel you have just created as the active kernel. It will be listed as (venv) plus the name of virtual environment <br/>
 
+If at any point you get a warning like:
+```
+NVIDIA GeForce RTX 3080 Ti Laptop GPU with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70.
+If you want to use the NVIDIA GeForce RTX 3080 Ti Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+```
+Please follow the link for instructions on the correct pytorch packages to install depending on your system. You may need to uninstall the packages already installed by requirements.txt via `pip3 uninstall <package>`, before reinstalling a different version of the same package or from a specific source.<br/>
 This code is compatible with Python >= 3.6.9
 * PyTorch >= 1.11.0
 * PyTorch Lightning >= 1.6.0 
