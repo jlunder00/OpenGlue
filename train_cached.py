@@ -27,10 +27,17 @@ def main():
 
     pl.seed_everything(int(os.environ.get('LOCAL_RANK', 0)))
 
+    # moved assignment of features_config before experiment_name creation to facilitate correcting error inputting
+    # the entire path to the extracted features being used as part of the experiment name
+    features_config = OmegaConf.load(os.path.join(config['data']['root_path'],
+                                               config['data']['features_dir'], 'config.yaml'))
+
     # Prepare directory for logs and checkpoints
+    # Use features_config['name'] rather than config['data']['features_dir'] to prevent entire path
+    # from being inputted as part of the experiment name, resulting in logs being saved in an unexpected location
     if os.environ.get('LOCAL_RANK', 0) == 0:
         experiment_name = '{}_cache__attn_{}__laf_{}__{}'.format(
-            config['data']['features_dir'],
+            features_config['name'],
             config['superglue']['attention_gnn']['attention'],
             config['superglue']['laf_to_sideinfo_method'],
             str(datetime.now().strftime("%Y-%m-%d-%H-%M-%S"))
@@ -56,8 +63,6 @@ def main():
         train_pairs_overlap=data_config.get('train_pairs_overlap')
     )
 
-    features_config = OmegaConf.load(os.path.join(config['data']['root_path'],
-                                                  config['data']['features_dir'], 'config.yaml'))
 
     # Init model
     model = MatchingTrainingModule(
@@ -71,6 +76,9 @@ def main():
     loggers = get_training_loggers(config, log_path, experiment_name)
 
     # Init distributed trainer
+    # Replace accelerator="ddp" and plugins=DDPPlugin with strategy=DDPStrategy
+    # due to recent pytorch lightning updates removing certain plugins/accelerators 
+    # and replacing them with the better descriptor of strategy.
     trainer = pl.Trainer(
         gpus=config['gpus'],
         max_epochs=config['train']['epochs'],

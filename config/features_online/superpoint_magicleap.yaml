@@ -6,4 +6,4 @@ parameters:
   nms_kernel: 9
   remove_borders_size: 4
   keypoint_threshold: 0.005
-  weights: '/home/ostap/projects/SuperGluePretrainedNetwork/models/weights/superpoint_v1.pth'
+  weights: './models/superglue/weights/superpoint_magicleap_v1.pth'

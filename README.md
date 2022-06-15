@@ -68,8 +68,7 @@ MegaDepth/
       ...
 ```
 
-### Steps to prepare Oxford-Paris dataset for pre-training
-We also release the open-source weights for a pretrained OpenGlue on this dataset. 
+Additionally, you may generate train/validate splits of the scenes extracted in this step. See [`data_preparaton.ipynb`](data_preparation.ipynb) to create splits of the data and to see examples of the data with more detailed explanation.
 
 
 ## Usage
@@ -82,14 +81,26 @@ This repository is divided into several modules:
 * `utils` - losses, metrics and additional training utils
 
 ### Dependencies
+Todo: add details about installing correct versions of torch with cu113. Update requirements.txt to automate
 For all necessary modules refer to requirements.txt
+<br/>First, create and enter a virtual environment
+```
+python -m venv ./OpenGlue
+source bin/activate
+```
+Note: the environment does not neccessarily need to be created in the OpenGlue directory. <br/>
+Then, install the requirements
 ```
 pip3 install -r requirements.txt
+```
+Then, to use in an interactive environment, link your virtual environment with an interactive python environment.
+```
+<need to find command for this>
 ```
 
 This code is compatible with Python >= 3.6.9
 * PyTorch >= 1.10.0
-* PyTorch Lightning >= 1.4.9 
+* PyTorch Lightning >= 1.6.0 
 * Kornia >= 0.6.1
 * OpenCV >= 4.5.4
 
@@ -97,10 +108,12 @@ This code is compatible with Python >= 3.6.9
 
 ### Extracting features
 There are two options for feature extraction:
-1) Extract features <b>during training</b>. No additional steps required before <b><i>Launching training</i></b>.
+1) Extract features <b>during training</b>. No additional steps required before <b><i>Launching training</i></b>. For more details and to do this in an interactive environment, see [`Training_pipeline_no_cache.ipynb`](Training_pipeline_no_cache.ipynb)
 
 
-2) Extract and save features <b>before</b> training. We suggest using this approach, since training time is decreased immensely with pre-extracted features. Although this step is disk memory expensive.
+2) Extract and save features <b>before</b> training. We suggest using this approach, since training time is decreased immensely with pre-extracted features. Although this step is disk memory expensive. For more details and to do this in an interactive environment, see [`Training_pipeline_cached_features.ipynb`](Training_pipeline_cached_features.ipynb)
+
+The following instructions are for preforming feature extraction as a script rather than interactive python<br/>
 To do this, run `python extract_features.py` with the following parameters (for more details, please, refer to module's documentation):
       
    * `--device` - `[cpu, cuda]`
@@ -121,6 +134,10 @@ To do this, run `python extract_features.py` with the following parameters (for 
    * DoG-AffNet-HardNet - [`dog_opencv_affnet_hardnet.yaml`](config/features/dog_opencv_affnet_hardnet.yaml)
 
 ### Launching training
+If you wish to preform training in an interactive environment, please refer to the following files depending on if you want to train without pre-extracted features (1), or with pre-extracted (cached) features (2):<br/> 
+1.[`Training_pipeline_no_cache.ipynb`](Training_pipeline_no_cache.ipynb)<br/>
+2.[`Training_pipeline_cached_features.ipynb`](Training_pipeline_cached_features.ipynb)<br/>
+The following instructions are for preforming training as a script rather than interactive python<br/>
 
 Before training, set all necessary hyperparameters configurations in your config file.
 If you selected to extract features during training, then edit [`config/config.yaml`](config/config.yaml). For pre-extracted features `config/config_cached.yaml` will be used.
@@ -154,7 +171,7 @@ Our checkpoints are available in this [folder](https://drive.google.com/drive/fo
 Some other weights might be added in the future. 
 
 ## Testing
-Example of how to run inference and receive visualizations is shown in [`Image-matching.ipynb`](examples/Image-matching.ipynb).
+Example of how to run inference and receive visualizations is shown in [`Inference.ipynb`](Inference.ipynb).
 
 To run inference on two images and receive a visualization of resulting matches, please use [inference.py](inference.py)
 

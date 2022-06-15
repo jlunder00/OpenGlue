@@ -31,8 +31,7 @@ def main():
 
     # Prepare directory for logs and checkpoints
     if os.environ.get('LOCAL_RANK', 0) == 0:
-        experiment_name = '{}/{}__attn_{}__laf_{}__{}'.format(
-            config['data']['experiments_root_path'],
+        experiment_name = '{}__attn_{}__laf_{}__{}'.format(
             feature_extractor_config['name'],
             config['superglue']['attention_gnn']['attention'],
             config['superglue']['laf_to_sideinfo_method'],
@@ -68,6 +67,9 @@ def main():
     loggers = get_training_loggers(config, log_path, experiment_name)
 
     # Init distributed trainer
+    # Replace accelerator="ddp" and plugins=DDPPlugin with strategy=DDPStrategy
+    # due to recent pytorch lightning updates removing certain plugins/accelerators 
+    # and replacing them with the better descriptor of strategy.
     trainer = pl.Trainer(
         gpus=config['gpus'],
         max_epochs=config['train']['epochs'],

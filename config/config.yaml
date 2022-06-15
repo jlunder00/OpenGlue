@@ -4,7 +4,6 @@ data:
   train_list_path: ./assets/subset-20-20-train.txt
   val_list_path: ./assets/subset-20-20-val.txt
   test_list_path: ./assets/subset-20-20-val.txt
-  experiments_root_path: '/host_Data/Data/MegaDepth/MegaDepth/extracted_features/phoenix3'
 
   batch_size_per_gpu: 2
   dataloader_workers_per_gpu: 4
@@ -13,7 +12,7 @@ data:
   train_pairs_overlap: [0.15, 0.7]
 
 logging:
-  root_path: 'logs'
+  root_path: '/host_Data/Data/MegaDepth/MegaDepth/extracted_features/phoenix3'
   name: 'Superpoint_960_720'
   train_logs_steps: 50
 

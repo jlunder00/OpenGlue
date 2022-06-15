@@ -14,7 +14,7 @@ data:
   train_pairs_overlap: [0.15, 0.7]
 
 logging:
-  root_path: 'logs'
+  root_path: '/host_Data/Data/MegaDepth/MegaDepth/extracted_features/phoenix3'
   name: 'SuperPointNet_960_720_preextracted'
   train_logs_steps: 50
 

@@ -46,9 +46,16 @@ def initialize_models(experiment_path,
     config_path = os.path.join(experiment_path, 'config.yaml')
     config = OmegaConf.load(config_path)
 
+    '''
+      Edited way features_config is loaded to not require a path to a features directory
+      since training runs done with pre-extraction don't have a features directory
+      Additionally, both types of training always result in the feature extractor config beig saved in 
+      the folder located at experiment_path, so this way simpler as well.
+    '''
     features_config = OmegaConf.load(os.path.join(experiment_path, 'features_config.yaml'))
     # features_config = OmegaConf.load(os.path.join(config['data']['root_path'],
                                                   # config['data']['features_dir'], 'config.yaml'))
+    
     config['features'] = features_config
 
     checkpoint_path = os.path.join(experiment_path, checkpoint_name)
@@ -63,7 +70,7 @@ def initialize_models(experiment_path,
         assert resize_to[0] > 0
         assert resize_to[1] > 0
         config['data']['target_size'] = resize_to
-    print(config['features'])
+    # print(config['features'])
 
     # Initialize models & load weights
     local_features_extractor = get_feature_extractor(config['features']['name'])(**config['features']['parameters'])
@@ -71,14 +78,14 @@ def initialize_models(experiment_path,
 
     state_dict = torch.load(str(checkpoint_path), map_location='cpu')['state_dict']
     for key in list(state_dict.keys()):
-        print(key)
+        #added check for *local_feature_extractor_key* and remove all keys containing it.
+        #Corrects for error in weights/biases loaded from state_dict when DataParallelStrategy is used (necessary to run training in jupyter) rather than DDPStrategy
         if 'local_features_extractor' in key:
             state_dict.pop(key)
         else:
             state_dict[key.replace('superglue.', '')] = state_dict.pop(key)
+
     superglue = SuperGlue(config['superglue'])
-    for tensor in superglue.state_dict():
-        print(tensor, '\t', superglue.state_dict()[tensor].size())
     message = superglue.load_state_dict(state_dict)
     print(message)
     superglue.to(device)
@@ -233,7 +240,6 @@ def run_inference(image0_path, image1_path, experiment_path, checkpoint_name, de
     sg = OpenGlueMatcher(feature_extractor, matcher, config)
     with torch.no_grad():
         out = sg({"image0": timg0, "image1": timg1})
-    print('-------------', out['keypoints0'].detach().cpu().numpy(), out['keypoints1'].detach().cpu().numpy(), cv2.USAC_MAGSAC, 1.0, 0.999, 100000)
     F, inliers = cv2.findFundamentalMat(out['keypoints0'].detach().cpu().numpy(),
                                         out['keypoints1'].detach().cpu().numpy(),
                                         cv2.USAC_MAGSAC, 1.0, 0.999, 100000)

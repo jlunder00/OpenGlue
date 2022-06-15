@@ -6,5 +6,7 @@ venv/
 scratch/
 scratch*.py
 wand/
+wandb/
+logs/
 Superpoint_960_720/
 .ipynb_checkpoints/

@@ -6,4 +6,4 @@ parameters:
   nms_kernel: 9
   remove_borders_size: 4
   keypoint_threshold: 0.005
-  weights: '/home/ostap/projects/pytorch-superpoint/logs/superpoint_kitti_heat2_0/checkpoints/superPointNet_50000_checkpoint.pth.tar'
+  weights: './models/superglue/weights/superpoint_kitti_50000_checkpoint.pth.tar'
