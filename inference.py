@@ -21,6 +21,7 @@ from utils.misc import arange_like
 
 def load_torch_image(fname, resize_to=None, device=torch.device('cpu')):
     image = cv2.imread(fname)
+    print(type(device))
     timg = K.color.bgr_to_grayscale(K.image_to_tensor(image, False) / 255.).to(device)
     if resize_to is not None:
         new_w, new_h = resize_to
@@ -76,7 +77,7 @@ def initialize_models(experiment_path,
     local_features_extractor = get_feature_extractor(config['features']['name'])(**config['features']['parameters'])
     local_features_extractor.to(device)
 
-    state_dict = torch.load(str(checkpoint_path), map_location='cpu')['state_dict']
+    state_dict = torch.load(str(checkpoint_path), map_location=device)['state_dict']
     for key in list(state_dict.keys()):
         #added check for *local_feature_extractor_key* and remove all keys containing it.
         #Corrects for error in weights/biases loaded from state_dict when DataParallelStrategy is used (necessary to run training in jupyter) rather than DDPStrategy
@@ -234,8 +235,10 @@ def run_inference(image0_path, image1_path, experiment_path, checkpoint_name, de
                                                            torch.device(device),
                                                            max_features,
                                                            resize_to)
-    timg0 = load_torch_image(image0_path)
-    timg1 = load_torch_image(image1_path)
+    
+    #fixed a bug where the device given wasn't passed here so the device parameter of load_torch_image defaulted to cpu even if cuda was selected
+    timg0 = load_torch_image(image0_path, device=torch.device(device))
+    timg1 = load_torch_image(image1_path, device=torch.device(device))
 
     sg = OpenGlueMatcher(feature_extractor, matcher, config)
     with torch.no_grad():
@@ -264,10 +267,15 @@ def main():
     # For consistency, config should be taken directly from the trained experiment directory
     img0, img1, lafs0, lafs1, inliers = run_inference(args.image0_path, args.image1_path, args.experiment_path,
                                                       args.checkpoint_name, args.device)
-
+    
+    '''
+        fixed a bug where lafs0 and lafs1 tensors were not sent to the cpu prior to drawing. 
+        If cuda was used in previous steps, they need to be sent to the cpu for the draw step. 
+        If cpu is used the whole way this is not needed but will not affect the output since the tensor was already on the cpu.
+    '''
     draw_LAF_matches(
-        lafs0,
-        lafs1,
+        lafs0.cpu(),
+        lafs1.cpu(),
         torch.arange(len(inliers)).view(-1, 1).repeat(1, 2),
         K.tensor_to_image(img0),
         K.tensor_to_image(img1),
