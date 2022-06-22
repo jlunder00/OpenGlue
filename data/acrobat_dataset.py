@@ -13,9 +13,9 @@ def array_to_tensor(img_array):
     return torch.FloatTensor(img_array / 255.).unsqueeze(0)
 
 
-class MegaDepthWarpingDataset(torch.utils.data.Dataset):
+class AcrobatWarpingDataset(torch.utils.data.Dataset):
     """
-    MegaDepth dataset that creates images pair by warping single image.
+    Acrobat dataset that creates images pair by warping single image.
     """
 
     def __init__(self, root_path, scenes_list, target_size):
@@ -52,7 +52,7 @@ class MegaDepthWarpingDataset(torch.utils.data.Dataset):
         return {'image0': array_to_tensor(image), 'image1': array_to_tensor(warped), 'transformation': transformation}
 
 
-class BaseMegaDepthPairsDataset(torch.utils.data.Dataset):
+class BaseAcrobatPairsDataset(torch.utils.data.Dataset):
     def __init__(self, root_path, scenes_list, max_pairs_per_scene=None, overlap=None):
         self.root_path = Path(root_path)
 
@@ -64,8 +64,8 @@ class BaseMegaDepthPairsDataset(torch.utils.data.Dataset):
                 with open(pairs_path) as f:
                     pairs_metadata = f.readlines()
                     pairs_metadata = list(map(lambda x: x.rstrip(), pairs_metadata))
-                    if overlap is not None:  # keep pairs with given overlap
-                        pairs_metadata = self.filter_pairs_by_overlap(pairs_metadata, overlap)
+                    # if overlap is not None:  # keep pairs with given overlap
+                    #     pairs_metadata = self.filter_pairs_by_overlap(pairs_metadata, overlap)
             except FileNotFoundError:
                 pairs_metadata = []
             self.image_pairs[scene] = pairs_metadata
@@ -92,15 +92,18 @@ class BaseMegaDepthPairsDataset(torch.utils.data.Dataset):
 
     @staticmethod
     def parse_pairs_line(line):
-        img0_name, img1_name, _, _, *camera_params, overlap = line.split(' ')
-        print(camera_params)
-        camera_params = list(map(lambda x: float(x), camera_params))
-        K0, K1, RT = camera_params[:9], camera_params[9:18], camera_params[18:]
-        K0 = np.array(K0).astype(np.float32).reshape(3, 3)
-        K1 = np.array(K1).astype(np.float32).reshape(3, 3)
-        RT = np.array(RT).astype(np.float32).reshape(4, 4)
-        R, T = RT[:3, :3], RT[:3, 3]
-        return img0_name, img1_name, K0, K1, R, T, float(overlap)
+        # camera params 
+        # img0_name, img1_name, _, _, *camera_params, overlap = line.split(' ')
+        # print(camera_params)
+        # camera_params = list(map(lambda x: float(x), camera_params))
+        # K0, K1, RT = camera_params[:9], camera_params[9:18], camera_params[18:]
+        # K0 = np.array(K0).astype(np.float32).reshape(3, 3)
+        # K1 = np.array(K1).astype(np.float32).reshape(3, 3)
+        # RT = np.array(RT).astype(np.float32).reshape(4, 4)
+        # R, T = RT[:3, :3], RT[:3, 3]
+        # return img0_name, img1_name, K0, K1, R, T, float(overlap)
+        img0_name, img1_name = line.split(' ')
+        return img0_name, img1_name
 
     @staticmethod
     def filter_pairs_by_overlap(pairs_metadata, overlap_range):
@@ -113,26 +116,29 @@ class BaseMegaDepthPairsDataset(torch.utils.data.Dataset):
         return result
 
 
-class MegaDepthPairsDataset(BaseMegaDepthPairsDataset):
+class AcrobatPairsDataset(BaseAcrobatPairsDataset):
     def __init__(self, root_path, scenes_list, target_size=None, random_crop=False, max_pairs_per_scene=None,
                  overlap=None):
-        super(MegaDepthPairsDataset, self).__init__(root_path, scenes_list, max_pairs_per_scene, overlap)
+        super(AcrobatPairsDataset, self).__init__(root_path, scenes_list, max_pairs_per_scene, overlap)
         self.target_size = tuple(target_size) if target_size is not None else None
         self.random_crop = random_crop
 
     def __getitem__(self, idx):
-        (img0_name, img1_name, K0, K1, R, T, overlap), \
-        scene, scene_idx = super(MegaDepthPairsDataset, self).__getitem__(idx)
+        # (img0_name, img1_name, K0, K1, R, T, overlap), \
+        (img0_name, img1_name),\
+        scene, scene_idx = super(AcrobatPairsDataset, self).__getitem__(idx)
 
         # read and transform images
         images = []
-        for img_name, K in ((img0_name, K0), (img1_name, K1)):
-            image = cv2.imread(str(self.root_path / 'phoenix/S6/zl548/MegaDepth_v1' / scene / 'dense0/imgs' / img_name))
+        # for img_name, K in ((img0_name, K0), (img1_name, K1)):
+        for img_name in (img0_name, img1_name):
+            image = cv2.imread(str(self.root_path / 'phoenix/S6/zl548/Acrobat_v1' / scene / 'dense0/imgs' / img_name))
             image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-            depth = dd.io.load(str(
-                self.root_path / 'phoenix/S6/zl548/MegaDepth_v1' / scene / 'dense0/depths' / (img_name[:-3] + 'h5')))[
-                'depth']
+            
+            # no depth data for slide images
+            # depth = dd.io.load(str(
+            #     self.root_path / 'phoenix/S6/zl548/Acrobat_v1' / scene / 'dense0/depths' / (img_name[:-3] + 'h5')))[
+            #     'depth']
 
             if self.target_size is not None:
                 size = image.shape[:2][::-1]
@@ -144,7 +150,8 @@ class MegaDepthPairsDataset(BaseMegaDepthPairsDataset):
                     resize_width = int(current_ratio * resize_height)
 
                     image = cv2.resize(image, (resize_width, resize_height))
-                    depth = cv2.resize(depth, (resize_width, resize_height), cv2.INTER_NEAREST)
+                    # no depth data
+                    # depth = cv2.resize(depth, (resize_width, resize_height), cv2.INTER_NEAREST)
                     # crop width
                     # max fixes case when resize_width == self.target_size[0]
                     if self.random_crop:
@@ -154,19 +161,19 @@ class MegaDepthPairsDataset(BaseMegaDepthPairsDataset):
                     end_width = start_width + self.target_size[0]
 
                     image = image[:, start_width:end_width]
-                    depth = depth[:, start_width:end_width]
+                    # depth = depth[:, start_width:end_width]
                     # update K
                     scales = np.diag([resize_width / size[0], resize_height / size[1], 1.0]).astype(np.float32)
 
                     #Part of camera params
-                    K = np.dot(scales, K)
-                    K[0, 2] -= start_width
+                    # K = np.dot(scales, K)
+                    # K[0, 2] -= start_width
                 else:
                     resize_width = self.target_size[0]
                     resize_height = int(resize_width / current_ratio)
 
                     image = cv2.resize(image, (resize_width, resize_height))
-                    depth = cv2.resize(depth, (resize_width, resize_height), cv2.INTER_NEAREST)
+                    # depth = cv2.resize(depth, (resize_width, resize_height), cv2.INTER_NEAREST)
                     # crop height
                     if self.random_crop:
                         start_height = np.random.randint(0, max(resize_height - self.target_size[1], 1))
@@ -174,66 +181,74 @@ class MegaDepthPairsDataset(BaseMegaDepthPairsDataset):
                         start_height = (resize_height - self.target_size[1]) // 2
                     end_height = start_height + self.target_size[1]
 
-        # used for relating crops of image
                     image = image[start_height:end_height, :]
-                    depth = depth[start_height:end_height, :]
+                    # depth = depth[start_height:end_height, :]
                     # update K
                     scales = np.diag([resize_width / size[0], resize_height / size[1], 1.0]).astype(np.float32)
                     
                     # Part of camera params
-                    K = np.dot(scales, K)
-                    K[1, 2] -= start_height
+                    # K = np.dot(scales, K)
+                    # K[1, 2] -= start_height
 
-            images.append((image, depth, K))
+            # images.append((image, depth, K))
+            images.append((image))
 
-        (image0, depth0, K0), (image1, depth1, K1) = images
-
+        # (image0, depth0, K0), (image1, depth1, K1) = images
+        (image0),(image1)=images
         #Depth info and camera information included in tranformation, returned with images as result of __getitem__
-        transformation = {
-            'type': '3d_reprojection',
-            'K0': torch.from_numpy(K0),
-            'K1': torch.from_numpy(K1),
-            'R': torch.from_numpy(R),
-            'T': torch.from_numpy(T),
-            'depth0': torch.from_numpy(depth0),
-            'depth1': torch.from_numpy(depth1),
-        }
+        # transformation = {
+        #     'type': '3d_reprojection',
+        #     'K0': torch.from_numpy(K0),
+        #     'K1': torch.from_numpy(K1),
+        #     'R': torch.from_numpy(R),
+        #     'T': torch.from_numpy(T),
+        #     'depth0': torch.from_numpy(depth0),
+        #     'depth1': torch.from_numpy(depth1),
+        # }
 
-        return {'image0': array_to_tensor(image0), 'image1': array_to_tensor(image1), 'transformation': transformation}
+        # return {'image0': array_to_tensor(image0), 'image1': array_to_tensor(image1), 'transformation': transformation}
+        return {'image0':array_to_tensor(image0), 'image1':array_to_tensor(image1)}
 
-
-class MegaDepthPairsDatasetFeatures(BaseMegaDepthPairsDataset):
+class AcrobatPairsDatasetFeatures(BaseAcrobatPairsDataset):
     def __init__(self, root_path, features_dir, scenes_list, target_size=None, random_crop=False,
                  max_pairs_per_scene=None, overlap=None):
-        super(MegaDepthPairsDatasetFeatures, self).__init__(root_path, scenes_list, max_pairs_per_scene, overlap)
+        super(AcrobatPairsDatasetFeatures, self).__init__(root_path, scenes_list, max_pairs_per_scene, overlap)
         self.features_base_dir = self.root_path / features_dir
         self.target_size = tuple(target_size) if target_size is not None else None
         self.random_crop = random_crop
 
     def __getitem__(self, idx):
-        (img0_name, img1_name, K0, K1, R, T, overlap), \
-        scene, scene_idx = super(MegaDepthPairsDatasetFeatures, self).__getitem__(idx)
+        # (img0_name, img1_name, K0, K1, R, T, overlap), \
+        (img0_name, img1_name),\
+        scene, scene_idx = super(AcrobatPairsDatasetFeatures, self).__getitem__(idx)
 
         images_info = []
-        for img_name, K in ((img0_name, K0), (img1_name, K1)):
+
+        #K is a part of camera info
+        # for img_name, K in ((img0_name, K0), (img1_name, K1)):
+        for img_name in (img0_name, img1_name):
             base_name = img_name[:-4]
-            image = cv2.imread(str(self.root_path / 'phoenix/S6/zl548/MegaDepth_v1' / scene / 'dense0/imgs' / img_name))
+            image = cv2.imread(str(self.root_path / 'phoenix/S6/zl548/Acrobat_v1' / scene / 'dense0/imgs' / img_name))
             orig_size = image.shape[:2][::-1]  # original image size
 
             features_dir = self.features_base_dir / scene
 
+            #THESE ARE GENERATED IN FEATURE EXTRACTION
             lafs = dd.io.load(features_dir / f'{base_name}_lafs.h5')
             scores = dd.io.load(features_dir / f'{base_name}_scores.h5')
             descriptors = dd.io.load(features_dir / f'{base_name}_descriptors.h5', )
             # size after resizing one of sides to target size
             image_size = dd.io.load(features_dir / f'{base_name}_size.h5')
-
-            depth = dd.io.load(
-                self.root_path / 'phoenix/S6/zl548/MegaDepth_v1' / scene / 'dense0/depths' / f'{base_name}.h5')['depth']
-            depth = cv2.resize(depth, tuple(image_size), interpolation=cv2.INTER_NEAREST)
+            
+            #THIS IS NOT GENERATED IN FEATURE EXTRACTION
+            # depth = dd.io.load(
+            #     self.root_path / 'phoenix/S6/zl548/Acrobat_v1' / scene / 'dense0/depths' / f'{base_name}.h5')['depth']
+            # depth = cv2.resize(depth, tuple(image_size), interpolation=cv2.INTER_NEAREST)
 
             scales = np.diag([image_size[0] / orig_size[0], image_size[1] / orig_size[1], 1.0]).astype(np.float32)
-            K = np.dot(scales, K)
+            
+            #K comes from camera info
+            #K = np.dot(scales, K)
 
             # perform random crop
             if self.target_size[0] < image_size[0]:  # crop by width
@@ -243,9 +258,11 @@ class MegaDepthPairsDatasetFeatures(BaseMegaDepthPairsDataset):
                     start_width = (image_size[0] - self.target_size[0]) // 2
                 end_width = start_width + self.target_size[0]
 
-                depth = depth[:, start_width:end_width]
+                # depth = depth[:, start_width:end_width]
                 kpts_crop_mask = (lafs[:, 0, 2] >= start_width) & (lafs[:, 0, 2] < end_width)
-                K[0, 2] -= start_width
+                
+                #K comes from camera info
+                # K[0, 2] -= start_width
 
                 lafs = lafs[kpts_crop_mask]
                 lafs[:, 0, 2] -= start_width
@@ -258,27 +275,31 @@ class MegaDepthPairsDatasetFeatures(BaseMegaDepthPairsDataset):
                     start_height = (image_size[1] - self.target_size[1]) // 2
                 end_height = start_height + self.target_size[1]
 
-                depth = depth[start_height:end_height, :]
+                # depth = depth[start_height:end_height, :]
                 kpts_crop_mask = (lafs[:, 1, 2] >= start_height) & (lafs[:, 1, 2] < end_height)
-                K[1, 2] -= start_height
+               
+                #K comes from camera info
+                # K[1, 2] -= start_height
 
                 lafs = lafs[kpts_crop_mask]
                 lafs[:, 1, 2] -= start_height
                 scores = scores[kpts_crop_mask]
                 descriptors = descriptors[kpts_crop_mask]
 
-            images_info.append((lafs, scores, descriptors, depth, K))
+            # images_info.append((lafs, scores, descriptors, depth, K))
+            images_info.append((lafs, scores, descriptors))
 
-        (lafs0, scores0, descriptors0, depth0, K0), (lafs1, scores1, descriptors1, depth1, K1) = images_info
-        transformation = {
-            'type': '3d_reprojection',
-            'K0': torch.from_numpy(K0),
-            'K1': torch.from_numpy(K1),
-            'R': torch.from_numpy(R),
-            'T': torch.from_numpy(T),
-            'depth0': torch.from_numpy(depth0),
-            'depth1': torch.from_numpy(depth1),
-        }
+        # (lafs0, scores0, descriptors0, depth0, K0), (lafs1, scores1, descriptors1, depth1, K1) = images_info
+        (lafs0, scores0, descriptors0),(lafs1, scores1, descriptors1) = images_info
+        # transformation = {
+        #     'type': '3d_reprojection',
+        #     'K0': torch.from_numpy(K0),
+        #     'K1': torch.from_numpy(K1),
+        #     'R': torch.from_numpy(R),
+        #     'T': torch.from_numpy(T),
+        #     'depth0': torch.from_numpy(depth0),
+        #     'depth1': torch.from_numpy(depth1),
+        # }
         return {
             'lafs0': torch.from_numpy(lafs0),
             'scores0': torch.from_numpy(scores0),
@@ -286,7 +307,7 @@ class MegaDepthPairsDatasetFeatures(BaseMegaDepthPairsDataset):
             'lafs1': torch.from_numpy(lafs1),
             'scores1': torch.from_numpy(scores1),
             'descriptors1': torch.from_numpy(descriptors1),
-            'transformation': transformation,
+            # 'transformation': transformation,
             'image0_size': self.target_size,
             'image1_size': self.target_size
         }
@@ -296,8 +317,8 @@ if __name__ == '__main__':
     with open('/home/ostap/projects/superglue-lightning/assets/megadepth_valid_2.0.txt') as f:
         scenes_list = f.readlines()
 
-    ds = MegaDepthPairsDatasetFeatures(
-        root_path='/datasets/extra_space2/ostap/MegaDepth',
+    ds = AcrobatPairsDatasetFeatures(
+        root_path='/datasets/extra_space2/ostap/Acrobat',
         features_dir='SuperPointNet_960_720',
         target_size=[960, 720],
         random_crop=True,
