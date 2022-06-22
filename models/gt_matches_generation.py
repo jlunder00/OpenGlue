@@ -26,6 +26,8 @@ def generate_gt_matches(data: Dict[str, Any],
 
     kpts0, kpts1 = features0['keypoints'], features1['keypoints']
 
+
+    #THIS ENTIRE FUNCTION REQUIRES TRANSFORMATION INFO AND SEEMS VERY IMPORTANT
     transformation = data['transformation']
     transformation_inv = get_inverse_transformation(transformation)
     num0, num1 = kpts0.size(1), kpts1.size(1)

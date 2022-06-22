@@ -1,9 +1,9 @@
 gpus: [ 0 ]
 data:
-  root_path: /host_Data/Data/MegaDepth/MegaDepth
-  train_list_path: ./assets/subset-20-20-train.txt
-  val_list_path: ./assets/subset-20-20-val.txt
-  test_list_path: ./assets/subset-20-20-val.txt
+  root_path: /host_Data/Data/acrobat/acrobat_train_x5/
+  train_list_path: ./assets/subset-acrobat-train.txt
+  val_list_path: ./assets/subset-acrobat-val.txt
+  test_list_path: ./assets/subset-acrobat-val.txt
 
   batch_size_per_gpu: 2
   dataloader_workers_per_gpu: 4

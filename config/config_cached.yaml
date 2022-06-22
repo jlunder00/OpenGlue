@@ -1,26 +1,26 @@
 gpus: [ 0 ]
 data:
-  root_path: /host_Data/Data/MegaDepth/MegaDepth
-  train_list_path: ./assets/subset-20-20-train.txt
-  val_list_path: ./assets/subset-20-20-val.txt
-  test_list_path: ./assets/subset-20-20-val.txt
+  root_path: /host_Data/Data/acrobat/acrobat_train_x5/
+  train_list_path: ./assets/subset-10-20-acrobat-train.txt
+  val_list_path: ./assets/subset-10-20-acrobat-val.txt
+  test_list_path: ./assets/subset-10-20-acrobat-val.txt
   features_dir: '/host_Data/Data/MegaDepth/MegaDepth/extracted_features/phoenix3/SuperPointNet_960_720'
   max_keypoints: 1024
 
-  batch_size_per_gpu: 2
-  dataloader_workers_per_gpu: 2
+  batch_size_per_gpu: 1
+  dataloader_workers_per_gpu: 1
   target_size: [ 960, 720 ]
-  val_max_pairs_per_scene: 25
+  val_max_pairs_per_scene: 10
   train_pairs_overlap: [0.15, 0.7]
 
 logging:
   root_path: '/host_Data/Data/MegaDepth/MegaDepth/extracted_features/phoenix3'
   name: 'SuperPointNet_960_720_preextracted'
-  train_logs_steps: 50
+  train_logs_steps: 10
 
 train:
-  epochs: 2
-  steps_per_epoch: 500
+  epochs: 10
+  steps_per_epoch: 20
   grad_clip: 10.0
   precision: 32
   gt_positive_threshold: 2

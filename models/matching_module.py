@@ -62,10 +62,10 @@ class MatchingTrainingModule(pl.LightningModule):
         batch['image0'] = image0_aug
         batch['image1'] = image1_aug
 
-        if 'K0' in batch['transformation'] and transform0 is not None:
-            batch['transformation']['K0'] = torch.matmul(transform0, batch['transformation']['K0'])
-        if 'K1' in batch['transformation'] and transform1 is not None:
-            batch['transformation']['K1'] = torch.matmul(transform1, batch['transformation']['K1'])
+        # if 'K0' in batch['transformation'] and transform0 is not None:
+        #     batch['transformation']['K0'] = torch.matmul(transform0, batch['transformation']['K0'])
+        # if 'K1' in batch['transformation'] and transform1 is not None:
+        #     batch['transformation']['K1'] = torch.matmul(transform1, batch['transformation']['K1'])
         return batch
 
     def training_step(self, batch, batch_idx):
@@ -84,13 +84,21 @@ class MatchingTrainingModule(pl.LightningModule):
             lafs1, responses1, desc1 = batch['lafs1'], batch['scores1'], batch['descriptors1']
 
         log_transform_response = self.superglue_config.get('log_transform_response', False)
-        data, y_true = generate_gt_matches(
-            batch,
-            prepare_features_output(lafs0, responses0, desc0, self.laf_converter, log_response=log_transform_response),
-            prepare_features_output(lafs1, responses1, desc1, self.laf_converter, log_response=log_transform_response),
-            self.config['gt_positive_threshold'],
-            self.config['gt_negative_threshold']
-        )
+        features0 = prepare_features_output(lafs0, responses0, desc0, self.laf_converter, log_response=log_transform_response)
+        features1 = prepare_features_output(lafs1, responses1, desc1, self.laf_converter, log_response=log_transform_response)
+        data = {
+            **batch,
+            'keypoints0': features0['keypoints'], 'keypoints1': features1['keypoints'],
+            'local_descriptors0': features0['local_descriptors'], 'local_descriptors1': features1['local_descriptors'],
+            'side_info0': features0['side_info'], 'side_info1': features1['side_info'],
+        }
+        # data, y_true = generate_gt_matches(
+        #     batch,
+        #     prepare_features_output(lafs0, responses0, desc0, self.laf_converter, log_response=log_transform_response),
+        #     prepare_features_output(lafs1, responses1, desc1, self.laf_converter, log_response=log_transform_response),
+        #     self.config['gt_positive_threshold'],
+        #     self.config['gt_negative_threshold']
+        # )
 
         # skip step if no keypoints are detected on at least one of the images
         if data is None:
@@ -105,7 +113,7 @@ class MatchingTrainingModule(pl.LightningModule):
         return self.config['nll_weight'] * loss['loss'] + self.config['metric_weight'] * loss['metric_loss']
 
     def validation_step(self, batch, batch_idx):
-        transformation = {k: v[0] for k, v in batch['transformation'].items()}
+        # transformation = {k: v[0] for k, v in batch['transformation'].items()}
 
         with torch.no_grad():
             pred = self.forward(batch)
@@ -117,17 +125,21 @@ class MatchingTrainingModule(pl.LightningModule):
         matched_kpts0 = kpts0[matched_mask]
         matched_kpts1 = kpts1[matches[matched_mask]]
 
-        self.epipolar_dist_metric(matched_kpts0, matched_kpts1, transformation, len(kpts0))
-        self.camera_pose_auc_metric(matched_kpts0, matched_kpts1, transformation)
+        # self.epipolar_dist_metric(matched_kpts0, matched_kpts1, transformation, len(kpts0))
+        # self.camera_pose_auc_metric(matched_kpts0, matched_kpts1, transformation)
 
-        return {'matched_kpts0': matched_kpts0, 'matched_kpts1': matched_kpts1,
-                'transformation': transformation, 'num_detected_kpts': len(kpts0)}
+        # return {'matched_kpts0': matched_kpts0, 'matched_kpts1': matched_kpts1,
+        #         'transformation': transformation, 'num_detected_kpts': len(kpts0)}
+
+        # self.epipolar_dist_metric(matched_kpts0, matched_kpts1, len(kpts0))
+        # self.camera_pose_auc_metric(matched_kpts0, matched_kpts1)
+        return {'matched_kpts0' : matched_kpts0, 'matched_kpts1' : matched_kpts1, 'num_detected_kpts' : len(kpts0)}
 
     def on_validation_epoch_end(self):
-        self.log_dict(self.epipolar_dist_metric.compute(), sync_dist=True)
-        self.log_dict(self.camera_pose_auc_metric.compute(), sync_dist=True)
-        self.epipolar_dist_metric.reset()
-        self.camera_pose_auc_metric.reset()
+        # self.log_dict(self.epipolar_dist_metric.compute(), sync_dist=True)
+        # self.log_dict(self.camera_pose_auc_metric.compute(), sync_dist=True)
+        # self.epipolar_dist_metric.reset()
+        # self.camera_pose_auc_metric.reset()
         gc.collect()
 
     def configure_optimizers(self):
